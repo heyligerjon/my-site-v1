@@ -1,95 +1,83 @@
 //import * as NavigationMenu from '@radix-ui/react-navigation-menu';
+import Link from "next/link"
 
 export default function Nav() {
 return (
     <div>
-        <div className="nav nav-logo">
+        <div className='nav nav-logo'>
         </div>
-        <div className="nav nav-links">
-            <a
-            href="/about"
-            className="nav nav-link nav-featured"
-            target="_blank"
-            rel="noopener noreferrer"
+        <div className='nav nav-links'>
+            <Link
+            href='/'
+            className='nav nav-link nav-featured'
             >
-                <h2 className="nav-header">
-                    About{' '}
-                    <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                        -&gt;
-                    </span>
+                <h2 className='nav-icon'>
+                    HomeIco{' '}
                 </h2>
-                <p className="nav-p">
-                    About Me
+                <p className='nav-p'>
+                    Home
                 </p>
-            </a>
+            </Link>
 
-            <a
-            href="/featured"
-            className="nav nav-link nav-featured"
-            target="_blank"
-            rel="noopener noreferrer"
+            <Link
+            href='/about'
+            className='nav nav-link nav-featured'
             >
-                <h2 className="nav-header">
-                    Featured{' '}
-                    <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                        -&gt;
-                    </span>
+                <h2 className='nav-icon'>
+                    AboutIco{' '}
                 </h2>
-                <p className="nav-p">
+                <p className='nav-p'>
+                    About
+                </p>
+            </Link>
+
+            <Link
+            href='/featured'
+            className='nav nav-link nav-featured'
+            >
+                <h2 className='nav-icon'>
+                    FeaturedIco{' '}
+                </h2>
+                <p className='nav-p'>
                     Featured Projects
                 </p>
-            </a>
+            </Link>
 
-            <a
-            href="https://github.com/heyligerjon"
-            className="nav nav-link nav-featured"
-            target="_blank"
-            rel="noopener noreferrer"
+            <Link
+            href='https://github.com/heyligerjon'
+            className='nav nav-link nav-featured'
             >
-                <h2 className="nav-header">
-                    GitHub{' '}
-                    <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                        -&gt;
-                    </span>
+                <h2 className='nav-icon'>
+                    GitHubIco{' '}
                 </h2>
-                <p className="nav-p">
-                    GH Profile
+                <p className='nav-p'>
+                    GitHub
                 </p>
-            </a>
+            </Link>
 
-            <a
-            href="/contact"
-            className="nav nav-link nav-featured"
-            target="_blank"
-            rel="noopener noreferrer"
+            <Link
+            href='/contact'
+            className='nav nav-link nav-featured'
             >
-                <h2 className="nav-header">
-                    Contact{' '}
-                    <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                        -&gt;
-                    </span>
+                <h2 className='nav-icon'>
+                    ContactIco{' '}
                 </h2>
-                <p className="nav-p">
-                    Hit my line
+                <p className='nav-p'>
+                    Contact
                 </p>
-            </a>
+            </Link>
 
-            <a
-            href="/experience"
-            className="nav nav-link nav-featured"
-            target="_blank"
-            rel="noopener noreferrer"
+            <Link
+            href='/experience'
+            className='nav nav-link nav-featured'
             >
-            <h2 className="nav-header">
-                Experience{' '}
-                <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                    -&gt;
-                </span>
-            </h2>
-            <p className="nav-p">
-                Jobs I done had
-            </p>
-            </a>
+                <h2 className='nav-icon'>
+                    ExperienceIco{' '}
+                </h2>
+                <p className='nav-p'>
+                    Experience
+                </p>
+            </Link>
         </div>
     </div>
 )}

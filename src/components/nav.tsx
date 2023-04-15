@@ -5,11 +5,12 @@ export default function Nav() {
 return (
     <div>
         <div className='nav nav-logo'>
+
         </div>
         <div className='nav nav-links'>
             <Link
             href='/'
-            className='nav nav-link nav-featured'
+            className='nav nav-link nav-home'
             >
                 <h2 className='nav-icon'>
                     HomeIco{' '}
@@ -20,8 +21,8 @@ return (
             </Link>
 
             <Link
-            href='/about'
-            className='nav nav-link nav-featured'
+            href='#about'
+            className='nav nav-link nav-about'
             >
                 <h2 className='nav-icon'>
                     AboutIco{' '}
@@ -45,7 +46,9 @@ return (
 
             <Link
             href='https://github.com/heyligerjon'
-            className='nav nav-link nav-featured'
+            className='nav nav-link nav-github'
+            target='_blank'
+            rel='noopener noreferrer'
             >
                 <h2 className='nav-icon'>
                     GitHubIco{' '}
@@ -56,8 +59,8 @@ return (
             </Link>
 
             <Link
-            href='/contact'
-            className='nav nav-link nav-featured'
+            href='/'
+            className='nav nav-link nav-contact'
             >
                 <h2 className='nav-icon'>
                     ContactIco{' '}
@@ -69,7 +72,7 @@ return (
 
             <Link
             href='/experience'
-            className='nav nav-link nav-featured'
+            className='nav nav-link nav-exp'
             >
                 <h2 className='nav-icon'>
                     ExperienceIco{' '}

@@ -1,6 +1,9 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import ContactForm from '@/components/contactform'
+import About  from '@/pages/about'
+import Experience from '@/pages/experience' 
+import Featured from '@/pages/featured'
 import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -10,7 +13,7 @@ export default function Home() {
     // Handle successful form submission
     console.log('Form submitted successfully!');
   };
-  
+
   return (
     <main className=''>
       <div className='home-container'>
@@ -27,15 +30,24 @@ export default function Home() {
             </Link>
           </p>
           <button type='button'>
-                <Link
-                href='/about'
-                className='nav nav-link nav-featured'
-                >
-                    <h2 className='nav-header'>
-                        More About Me{' '}
-                    </h2>
-                </Link>
-            </button>
+            <Link
+            href='#about'
+            className='nav nav-link nav-featured'
+            >
+                <h2 className='nav-header'>
+                    More About Me{' '}
+                </h2>
+            </Link>
+          </button>
+        </div>
+        <div id='featured' className='feat-container'>
+          <Featured />
+        </div>
+        <div id='experience' className='exp-container'>
+          <Experience />
+        </div>
+        <div id='about' className='about-container'>
+          <About />
         </div>
         <div className='contact-container'>
           <ContactForm onSubmit={handleFormSubmit} />

@@ -1,28 +1,26 @@
-//import * as NavigationMenu from '@radix-ui/react-navigation-menu';
-import Link from "next/link"
+import * as NavigationMenu from '@radix-ui/react-navigation-menu';
+import Image from 'next/image';
+import Link from "next/link";
+import { CaretDownIcon } from '@radix-ui/react-icons';
 
 export default function Nav() {
 return (
-    <div>
-        <div className='nav nav-logo'>
+    <NavigationMenu.Root className='NavigationMenuRoot'>
+        <NavigationMenu.List className='NavigationMenuList nav-links'>
+            <NavigationMenu.Item>
+                <NavigationMenu.Trigger className='NavigationMenuTrigger'>
+                    <Image className='nav-icon' src='/static/img/Icon-code-working.svg' alt='Home' width={100} height={100} />
+                </NavigationMenu.Trigger>
+                <NavigationMenu.Content className='NavigationMenuContent'>
+                    <NavigationMenu.Link asChild>
+                        <Link href='/' className='nav nav-link nav-home'>
+                            <p className='nav-p'>Home</p>
+                        </Link>
+                    </NavigationMenu.Link>
+                </NavigationMenu.Content>
+            </NavigationMenu.Item>
 
-        </div>
-        <ul className='nav nav-links'>
-            <li>
-                <Link
-                href='/'
-                className='nav nav-link nav-home'
-                >
-                    <h2 className='nav-icon'>
-                        HomeIco{' '}
-                    </h2>
-                    <p className='nav-p'>
-                        Home
-                    </p>
-                </Link>
-            </li>
-
-            <li>
+            <NavigationMenu.Item>
                 <Link
                 href='#about'
                 className='nav nav-link nav-about'
@@ -34,9 +32,9 @@ return (
                         About
                     </p>
                 </Link>
-            </li>
+            </NavigationMenu.Item>
 
-            <li>
+            <NavigationMenu.Item>
                 <Link
                 href='#featured'
                 className='nav nav-link nav-featured'
@@ -48,9 +46,9 @@ return (
                         Featured Projects
                     </p>
                 </Link>
-            </li>
+            </NavigationMenu.Item>
 
-            <li>
+            <NavigationMenu.Item>
                 <Link
                 href='https://github.com/heyligerjon'
                 className='nav nav-link nav-github'
@@ -64,9 +62,9 @@ return (
                         GitHub
                     </p>
                 </Link>
-            </li>
+            </NavigationMenu.Item>
 
-            <li>
+            <NavigationMenu.Item>
                 <Link
                 href='#experience'
                 className='nav nav-link nav-exp'
@@ -78,9 +76,9 @@ return (
                         Experience
                     </p>
                 </Link>
-            </li>
+            </NavigationMenu.Item>
 
-            <li>
+            <NavigationMenu.Item>
                 <Link
                 href='#contact'
                 className='nav nav-link nav-contact'
@@ -92,7 +90,7 @@ return (
                         Contact
                     </p>
                 </Link>
-            </li>
-        </ul>
-    </div>
+            </NavigationMenu.Item>
+        </NavigationMenu.List>
+    </NavigationMenu.Root>
 )}

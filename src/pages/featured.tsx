@@ -15,28 +15,28 @@ export default function Featured() {
                 </li>
                 <li id='project-2' className='project'>
                     <h4 className='project-header'>Project 2</h4>
-                    <img className='project-img' />
+                    <Image className='project-img' src={""} alt={""} />
                     <p className='project-description'>
                         This is a description for my second featured project.
                     </p>
                 </li>
                 <li id='project-3' className='project'>
                     <h4 className='project-header'>Project 3</h4>
-                    <img className='project-img' />
+                    <Image className='project-img' src={""} alt={""} />
                     <p className='project-description'>
                         This is a description for my third featured project.
                     </p>
                 </li>
                 <li id='project-4' className='project'>
                     <h4 className='project-header'>Project 4</h4>
-                    <img className='project-img' />
+                    <Image className='project-img' src={""} alt={""} />
                     <p className='project-description'>
                         This is a description for my fourth featured project.
                     </p>
                 </li>
                 <li id='project-5' className='project'>
                     <h4 className='project-header'>Project 5</h4>
-                    <img className='project-img' />
+                    <Image className='project-img' src={""} alt={""} />
                     <p className='project-description'>
                         This is a description for my fifth featured project.
                     </p>

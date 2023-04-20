@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 
 interface ContactFormProps {
   onSubmit: () => void;
@@ -19,16 +18,23 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
 
     // try {
     //   // Make an API call to submit the contact form data
-    //   await axios.post('/api/contact', {
-    //     name,
-    //     email,
-    //     message,
+    //   await fetch('/api/contact', {
+    //     method: 'POST',
+    //     headers: {
+    //       'Content-Type': 'application/json',
+    //     },
+    //     body: JSON.stringify({
+    //       name,
+    //       email,
+    //       message,
+    //     }),
     //   });
     //   onSubmit(); // Callback function to handle successful form submission
     // } catch (err) {
     //   setError('Failed to submit form. Please try again later.'); // Set error state for error handling
     // } finally {
     //   setIsLoading(false);
+    // }
     // }
   };
 

@@ -16,43 +16,39 @@ export default function Home() {
 
   return (
     <main className=''>
-      <div className='home-container'>
-        <div className='welcome-container'>
-          <p className='welcome'>
-            Hello, my name is J. Isaacs, Freelance Developer and Founder of
-            <Link 
-            href='https://www.crate.digital' 
-            className='crate-link'
-            target='_blank'
-            rel='noopener'
-            >
-              <code className='font-mono font-bold'> crate.digital</code>
-            </Link>
-          </p>
-          <button type='button'>
-            <Link
-            href='#about'
-            className='nav nav-link nav-featured'
-            >
-                <h2 className='nav-header'>
-                    More About Me{' '}
-                </h2>
-            </Link>
-          </button>
+        <div className='home-container'>
+            <div className='welcome-container'>
+                <p className='welcome'>
+                Hello, my name is J. Isaacs, Freelance Developer and Founder of
+                <Link 
+                href='https://www.crate.digital' 
+                className='crate-link'
+                target='_blank'
+                rel='noopener'
+                >
+                    <code className='font-mono font-bold'> crate.digital</code>
+                </Link>
+                </p>
+                <button type='button'>
+                <Link
+                href='#about'
+                className='nav nav-link nav-featured'
+                >
+                    <h2 className='nav-header'>
+                        More About Me{' '}
+                    </h2>
+                </Link>
+                </button>
+            </div>
+            <div style={{height: '600px'}}></div>
+            <Featured />
+            <div style={{height: '600px'}}></div>
+            <Experience />
+            <div style={{height: '600px'}}></div>
+            <About />
+            <div style={{height: '600px'}}></div>
+            <ContactForm onSubmit={handleFormSubmit} />
         </div>
-        <div id='featured' className='feat-container'>
-          <Featured />
-        </div>
-        <div id='experience' className='exp-container'>
-          <Experience />
-        </div>
-        <div id='about' className='about-container'>
-          <About />
-        </div>
-        <div className='contact-container'>
-          <ContactForm onSubmit={handleFormSubmit} />
-        </div>
-      </div>
     </main>
   )
 }

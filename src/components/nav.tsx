@@ -7,80 +7,92 @@ return (
         <div className='nav nav-logo'>
 
         </div>
-        <div className='nav nav-links'>
-            <Link
-            href='/'
-            className='nav nav-link nav-home'
-            >
-                <h2 className='nav-icon'>
-                    HomeIco{' '}
-                </h2>
-                <p className='nav-p'>
-                    Home
-                </p>
-            </Link>
+        <ul className='nav nav-links'>
+            <li>
+                <Link
+                href='/'
+                className='nav nav-link nav-home'
+                >
+                    <h2 className='nav-icon'>
+                        HomeIco{' '}
+                    </h2>
+                    <p className='nav-p'>
+                        Home
+                    </p>
+                </Link>
+            </li>
 
-            <Link
-            href='#about'
-            className='nav nav-link nav-about'
-            >
-                <h2 className='nav-icon'>
-                    AboutIco{' '}
-                </h2>
-                <p className='nav-p'>
-                    About
-                </p>
-            </Link>
+            <li>
+                <Link
+                href='#about'
+                className='nav nav-link nav-about'
+                >
+                    <h2 className='nav-icon'>
+                        AboutIco{' '}
+                    </h2>
+                    <p className='nav-p'>
+                        About
+                    </p>
+                </Link>
+            </li>
 
-            <Link
-            href='/featured'
-            className='nav nav-link nav-featured'
-            >
-                <h2 className='nav-icon'>
-                    FeaturedIco{' '}
-                </h2>
-                <p className='nav-p'>
-                    Featured Projects
-                </p>
-            </Link>
+            <li>
+                <Link
+                href='#featured'
+                className='nav nav-link nav-featured'
+                >
+                    <h2 className='nav-icon'>
+                        FeaturedIco{' '}
+                    </h2>
+                    <p className='nav-p'>
+                        Featured Projects
+                    </p>
+                </Link>
+            </li>
 
-            <Link
-            href='https://github.com/heyligerjon'
-            className='nav nav-link nav-github'
-            target='_blank'
-            rel='noopener noreferrer'
-            >
-                <h2 className='nav-icon'>
-                    GitHubIco{' '}
-                </h2>
-                <p className='nav-p'>
-                    GitHub
-                </p>
-            </Link>
+            <li>
+                <Link
+                href='https://github.com/heyligerjon'
+                className='nav nav-link nav-github'
+                target='_blank'
+                rel='noopener noreferrer'
+                >
+                    <h2 className='nav-icon'>
+                        GitHubIco{' '}
+                    </h2>
+                    <p className='nav-p'>
+                        GitHub
+                    </p>
+                </Link>
+            </li>
 
-            <Link
-            href='/'
-            className='nav nav-link nav-contact'
-            >
-                <h2 className='nav-icon'>
-                    ContactIco{' '}
-                </h2>
-                <p className='nav-p'>
-                    Contact
-                </p>
-            </Link>
+            <li>
+                <Link
+                href='#experience'
+                className='nav nav-link nav-exp'
+                >
+                    <h2 className='nav-icon'>
+                        ExperienceIco{' '}
+                    </h2>
+                    <p className='nav-p'>
+                        Experience
+                    </p>
+                </Link>
+            </li>
 
-            <Link
-            href='/experience'
-            className='nav nav-link nav-exp'
-            >
-                <h2 className='nav-icon'>
-                    ExperienceIco{' '}
-                </h2>
-                <p className='nav-p'>
-                    Experience
-                </p>
-            </Link>
-        </div>
+            <li>
+                <Link
+                href='#contact'
+                className='nav nav-link nav-contact'
+                >
+                    <h2 className='nav-icon'>
+                        ContactIco{' '}
+                    </h2>
+                    <p className='nav-p'>
+                        Contact
+                    </p>
+                </Link>
+            </li>
+        </ul>
     </div>
 )}

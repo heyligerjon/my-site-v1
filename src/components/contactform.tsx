@@ -33,35 +33,33 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
   };
 
   return (
-    <div className='contact-form'>
-        <div className='contact-header'>
-            <h2>Contact</h2>
-        </div>
-        <form onSubmit={handleSubmit}>
-        <label htmlFor="name">Name</label>
-        <input
-            type="text"
-            id="name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-        />
-        <label htmlFor="email">Email</label>
-        <input
-            type="email"
-            id="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-        />
-        <label htmlFor="message">Message</label>
-        <textarea
-            id="message"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-        />
-        {error && <p>{error}</p>}
-        <button type="submit" disabled={isLoading}>
-            {isLoading ? 'Submitting...' : 'Submit'}
-        </button>
+    <div id='contact' className='contact-container'>
+        <h1 id='contact-header' className='section-header'>Contact</h1>
+        <form id='contact-form' className='contact-form' onSubmit={handleSubmit}>
+            <label htmlFor="name">Name</label>
+            <input
+                type="text"
+                id="name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+            />
+            <label htmlFor="email">Email</label>
+            <input
+                type="email"
+                id="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+            />
+            <label htmlFor="message">Message</label>
+            <textarea
+                id="message"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+            />
+            {error && <p>{error}</p>}
+            <button type="submit" disabled={isLoading}>
+                {isLoading ? 'Submitting...' : 'Submit'}
+            </button>
         </form>
     </div>
   );

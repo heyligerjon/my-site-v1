@@ -1,10 +1,12 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import * as NavigationMenu from '@radix-ui/react-navigation-menu';
 import ContactForm from '@/components/contactform'
 import About  from '@/pages/about'
 import Experience from '@/pages/experience' 
 import Featured from '@/pages/featured'
 import { Inter } from 'next/font/google'
+import { GitHubLogoIcon, StarIcon, CodeIcon, EnvelopeOpenIcon } from '@radix-ui/react-icons';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -29,17 +31,72 @@ export default function Home() {
                     <code className='font-mono font-bold'> crate.digital</code>
                 </Link>
                 </p>
-                <button type='button'>
-                <Link
-                href='#about'
-                className='nav nav-link nav-featured'
-                >
-                    <h2 className='nav-header'>
-                        More About Me{' '}
-                    </h2>
-                </Link>
+                <button id='about-button' style={{border: '2px solid #FFFFFF'}}>
+                    <Link href='#about' className='nav nav-link nav-featured'>
+                            More About Me
+                    </Link>
                 </button>
             </div>
+            <NavigationMenu.Root className='NavigationMenuRoot home-nav'>
+                <NavigationMenu.List className='NavigationMenuList nav-links'>
+                    <NavigationMenu.Item>
+                        <NavigationMenu.Trigger className='NavigationMenuTrigger'>
+                            <StarIcon className='nav-icon filter-navy' width={100} height={100}/>
+                        </NavigationMenu.Trigger>
+                        <NavigationMenu.Content className='NavigationMenuContent'>
+                            <NavigationMenu.Link asChild>
+                                <Link href='#featured' className='nav nav-link nav-featured'>
+                                    <p className='nav-p'>Featured Projects</p>
+                                </Link>
+                            </NavigationMenu.Link>
+                        </NavigationMenu.Content>
+                    </NavigationMenu.Item>
+
+                    <NavigationMenu.Item>
+                        <NavigationMenu.Trigger className='NavigationMenuTrigger'>
+                        <GitHubLogoIcon className='nav-icon filter-navy' width={100} height={100}/>
+                        </NavigationMenu.Trigger>
+                        <NavigationMenu.Content className='NavigationMenuContent'>
+                            <NavigationMenu.Link asChild>
+                                <Link
+                                href='https://github.com/heyligerjon'
+                                className='nav nav-link nav-github'
+                                target='_blank'
+                                rel='noopener noreferrer'
+                                >
+                                    <p className='nav-p'>GitHub</p>
+                                </Link>
+                            </NavigationMenu.Link>
+                        </NavigationMenu.Content>
+                    </NavigationMenu.Item>
+
+                    <NavigationMenu.Item>
+                        <NavigationMenu.Trigger className='NavigationMenuTrigger'>
+                            <CodeIcon className='nav-icon filter-navy' width={100} height={100}/>
+                        </NavigationMenu.Trigger>
+                        <NavigationMenu.Content className='NavigationMenuContent'>
+                            <NavigationMenu.Link asChild>
+                                <Link href='#experience' className='nav nav-link nav-exp'>
+                                    <p className='nav-p'>Experience</p>
+                                </Link>
+                            </NavigationMenu.Link>
+                        </NavigationMenu.Content>
+                    </NavigationMenu.Item>
+
+                    <NavigationMenu.Item>
+                        <NavigationMenu.Trigger className='NavigationMenuTrigger'>
+                            <EnvelopeOpenIcon className='nav-icon filter-navy' width={100} height={100}/>
+                        </NavigationMenu.Trigger>
+                        <NavigationMenu.Content className='NavigationMenuContent'>
+                            <NavigationMenu.Link asChild>
+                                <Link href='#contact' className='nav nav-link nav-contact'>
+                                    <p className='nav-p'>Contact</p>
+                                </Link>
+                            </NavigationMenu.Link>
+                        </NavigationMenu.Content>
+                    </NavigationMenu.Item>
+                </NavigationMenu.List>
+            </NavigationMenu.Root>
             <div style={{height: '600px'}}></div>
             <Featured />
             <div style={{height: '600px'}}></div>

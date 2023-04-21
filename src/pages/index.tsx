@@ -20,18 +20,25 @@ export default function Home() {
     <main className=''>
         <div className='home-container'>
             <div className='welcome-container'>
-                <p className='welcome'>
-                Hello, my name is J. Isaacs, Freelance Developer and Founder of
+                <p id='welcome' className='welcome-text'>
+                    Hello, my name is
+                </p>
+                <p id='welcome-2'> 
+                    J. Isaacs
+                </p>
+                <p id='welcome-3'>    
+                    Founder of
                 <Link 
                 href='https://www.crate.digital' 
                 className='crate-link'
                 target='_blank'
                 rel='noopener'
                 >
-                    <code className='font-mono font-bold'> crate.digital</code>
+                    <code className='font-mono font-bold'> crate.digital </code>
                 </Link>
+                    and Full-stack Web Developer
                 </p>
-                <button id='about-button' style={{border: '2px solid #FFFFFF'}}>
+                <button id='about-button'>
                     <Link href='#about' className='nav nav-link nav-featured'>
                             More About Me
                     </Link>
@@ -54,7 +61,7 @@ export default function Home() {
 
                     <NavigationMenu.Item>
                         <NavigationMenu.Trigger className='NavigationMenuTrigger'>
-                        <GitHubLogoIcon className='nav-icon filter-navy' width={100} height={100}/>
+                            <GitHubLogoIcon className='nav-icon filter-navy' width={100} height={100}/>
                         </NavigationMenu.Trigger>
                         <NavigationMenu.Content className='NavigationMenuContent'>
                             <NavigationMenu.Link asChild>
@@ -97,15 +104,12 @@ export default function Home() {
                     </NavigationMenu.Item>
                 </NavigationMenu.List>
             </NavigationMenu.Root>
-            <div style={{height: '600px'}}></div>
-            <Featured />
-            <div style={{height: '600px'}}></div>
-            <Experience />
-            <div style={{height: '600px'}}></div>
-            <About />
-            <div style={{height: '600px'}}></div>
-            <ContactForm onSubmit={handleFormSubmit} />
         </div>
+        <Featured />
+        <Experience />
+        <About />
+        <div style={{height: '600px'}}></div>
+        <ContactForm onSubmit={handleFormSubmit} />
     </main>
   )
 }

@@ -18,6 +18,7 @@
 # misc
 .DS_Store
 *.pem
+/public/static/radix-icons/
 
 # debug
 npm-debug.log*
@@ -34,5 +35,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# other 
-/public/static/radix-icons/
+# scss
+*.css.map
+*.scss

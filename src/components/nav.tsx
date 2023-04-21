@@ -5,11 +5,11 @@ import { HamburgerMenuIcon } from '@radix-ui/react-icons';
 
 export default function Nav() {
 return (
-    <NavigationMenu.Root className='NavigationMenuRoot mobile-nav'>
+    <NavigationMenu.Root className='NavigationMenuRoot mobile-nav' delayDuration={999999}>
         <NavigationMenu.List className='NavigationMenuList nav-links'>
             <NavigationMenu.Item>
                 <NavigationMenu.Trigger className='NavigationMenuTrigger'>
-                    <HamburgerMenuIcon className='nav-icon filter-navy' width={25} height={25}/>
+                    <HamburgerMenuIcon className='nav-icon filter-navy' width={40} height={40}/>
                 </NavigationMenu.Trigger>
                 <NavigationMenu.Content className='NavigationMenuContent'>
                     <NavigationMenu.Link asChild>

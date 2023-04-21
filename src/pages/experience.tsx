@@ -21,23 +21,23 @@ export default function Experience() {
                         </Tabs.Trigger>
                     </Tabs.List>
                     <Tabs.Content className='TabsContent tab-content' value='Tab1'>
-                        <h5>Mar 2023-Present</h5>
-                        <h6>Detroit, MI</h6>
+                        <h5>Detroit, MI</h5>
+                        <h6>Mar 2023-Present</h6>
                         <p>add description 1 here</p>
                     </Tabs.Content>
                     <Tabs.Content className='TabsContent tab-content' value='Tab2'>
-                        <h5>Dec 2022-Present</h5>
-                        <h6>Detroit, MI</h6>
+                        <h5>Detroit, MI</h5>
+                        <h6>Dec 2022-Present</h6>
                         <p>add description 2 here</p>
                     </Tabs.Content>
                     <Tabs.Content className='TabsContent tab-content' value='Tab3'>
-                        <h5>Aug 2019-Nov 2022</h5>
-                        <h6>St. Paul, MN & Detroit, MI</h6>
+                        <h5>St. Paul, MN & Detroit, MI</h5>
+                        <h6>Aug 2019-Nov 2022</h6>
                         <p>add description 3 here</p>
                     </Tabs.Content>
                     <Tabs.Content className='TabsContent tab-content' value='Tab4'>
-                        <h5>Aug 2015-May 2019</h5>
-                        <h6>Athens, GA</h6>
+                        <h5>Athens, GA</h5>
+                        <h6>Aug 2015-May 2019</h6>
                         <p>add description 4 here</p>
                     </Tabs.Content>
                 </Tabs.Root>

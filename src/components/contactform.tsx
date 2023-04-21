@@ -43,7 +43,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
     <div id='contact' className='contact-container'>
         <h1 id='contact-header' className='section-header'>Contact</h1>
         <Form.Root id='contact-form' className='FormRoot contact-form' onSubmit={handleSubmit}>
-            <Form.Field className='FormField' name='name'>
+            <Form.Field className='FormField field' name='name'>
                 <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between' }}>
                     <Form.Label className='FormLabel' htmlFor="name">Name</Form.Label>
                     <Form.Message className="FormMessage" match="valueMissing">
@@ -61,7 +61,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
                 </Form.Control>
             </Form.Field>
 
-            <Form.Field className='FormField' name='email'>
+            <Form.Field className='FormField field' name='email'>
                 <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between' }}>
                     <Form.Label className='FormLabel' htmlFor="email">Email</Form.Label>
                     <Form.Message className="FormMessage" match="valueMissing">
@@ -82,30 +82,33 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
                     </Form.Control>
             </Form.Field>
 
-            <Form.Field className='FormField' name='message'>
+            <Form.Field className='FormField field' name='message'>
                 <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between' }}>
                     <Form.Label className='FormLabel' htmlFor="message">Message</Form.Label>
-                    <Form.Message className="FormMessage" match="valueMissing">
-                        Please enter a message
-                    </Form.Message>
                 </div>
                     <Form.Control asChild>
                         <textarea
                             id="message"
                             value={message}
+                            style={{height: '150px'}}
                             onChange={(e) => setMessage(e.target.value)}
                             required
                             placeholder='Hi!'
                         />
                     </Form.Control>
+                    <Form.Message className="FormMessage" match="valueMissing">
+                        Please enter a message
+                    </Form.Message>
             </Form.Field>
             {error && <p>{error}</p>}
 
-            <Form.Submit asChild>
-                <button className='submit-btn' type="submit" disabled={isLoading}>
-                    {isLoading ? 'Submitting...' : 'Submit'}
-                </button>
-            </Form.Submit>
+            <div className='submit-div'>
+                <Form.Submit asChild>
+                    <button className='submit-btn' type="submit" disabled={isLoading}>
+                        {isLoading ? 'Submitting...' : 'Submit'}
+                    </button>
+                </Form.Submit>
+            </div>
         </Form.Root>
     </div>
   );

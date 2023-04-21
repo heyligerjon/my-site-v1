@@ -108,7 +108,6 @@ export default function Home() {
         <Featured />
         <Experience />
         <About />
-        <div style={{height: '600px'}}></div>
         <ContactForm onSubmit={handleFormSubmit} />
     </main>
   )

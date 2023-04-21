@@ -2,16 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 /* Colors and theming */
-@font-face {
-  font-family: "InterstateMono";
-  src: url("/public/static/fonts/interstatemono.otf");
-}
-@font-face {
-  font-family: "Caraque";
-  src: url("/public/static/fonts/caraquesolid.otf") url("/public/static/fonts/caraquesolid-webfont.woff2") format("woff2"), url("/public/static/fonts/caraquesolid-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
 /* Reset CSS */
 html,
 body,
@@ -38,7 +28,7 @@ body {
   font-size: 16px;
   color: #021e36;
   line-height: 1.5;
-  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  background: #f8f5eb;
 }
 
 .container {
@@ -72,7 +62,7 @@ code {
 }
 
 .feat-container, .exp-container, .about-container, .contact-container {
-  margin: 0 3rem;
+  margin: 0 3rem 10rem;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -120,6 +110,7 @@ code {
   border-radius: 30px 0 0 30px;
   padding: 0.5rem 3rem 0.5rem 1rem;
   margin-top: 1.5rem;
+  transition: 0.5s;
 }
 .home-container .home-nav li .nav-p {
   padding-left: 1rem;
@@ -152,19 +143,100 @@ code {
   padding: 1rem;
 }
 
-.tab:active, .tab:focus {
+.tab:active, .tab:focus, .tab:hover {
   background-color: #021e36;
-  color: #FFF7D7;
+  color: #f8f5eb;
+  transition: 0.25s;
 }
 
 .tab-list {
-  max-width: 50%;
+  max-width: 30%;
 }
 
 .tab-content {
   border: 2px solid #021e36;
   border-radius: 0 15px 15px 0;
+  padding: 1rem;
   width: 50%;
+}
+.tab-content h5 {
+  font-size: 10pt;
+}
+.tab-content h6 {
+  font-size: 8pt;
+  font-style: italic;
+}
+.tab-content p {
+  padding-top: 0.5rem;
+}
+
+/* About Styles */
+#about-header {
+  margin-top: -7rem;
+  padding-bottom: 5rem;
+}
+
+.about-img {
+  border: 2px solid #021e36;
+  border-radius: 62.5px;
+  padding: 0.75rem;
+}
+
+.image {
+  border-radius: 50px;
+}
+
+.about-detail {
+  border: 2px solid #021e36;
+  border-radius: 50px;
+  padding: 25px;
+}
+
+/* Contact Styles */
+#contact-header {
+  margin-top: -5rem;
+  margin-bottom: 15rem;
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  margin: -15rem 0 10rem 0;
+  width: 75%;
+}
+#contact-form .field {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1rem;
+}
+#contact-form .field div {
+  width: 20%;
+}
+#contact-form .field input, #contact-form .field textarea {
+  border: 1px solid #021e36;
+  border-radius: 5px;
+  background-color: shade(#f8f5eb, 200%);
+  padding: 0.25rem 0.5rem;
+  width: 35%;
+}
+#contact-form .field .FormMessage {
+  padding: 0 0 0 1rem;
+}
+#contact-form .submit-div {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+/* Footer Styles */
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: #021e36;
+  color: #f8f5eb;
+  margin-top: -5rem;
+  padding: 5rem 0;
 }
 
 /* Responsive Styles */
@@ -176,6 +248,17 @@ code {
   .home-nav {
     display: none;
   }
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-content .about-img {
+    width: 300px;
+  }
+  .about-content .about-detail {
+    min-width: 300px;
+  }
 }
 @media screen and (min-width: 480px) {
   /* Styles for small devices */
@@ -184,6 +267,17 @@ code {
   }
   .home-nav {
     display: none;
+  }
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-content .about-img {
+    width: 300px;
+  }
+  .about-content .about-detail {
+    min-width: 300px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -194,6 +288,19 @@ code {
   .home-nav {
     display: flex;
   }
+  .about-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .about-content .about-img {
+    width: 350px;
+  }
+  .about-content .about-detail {
+    min-width: 300px;
+    max-width: 50%;
+    height: fit-content;
+  }
 }
 @media screen and (min-width: 960px) {
   /* Styles for desktops */
@@ -202,6 +309,16 @@ code {
   }
   .home-nav {
     display: flex;
+  }
+  .about-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .about-content .about-detail {
+    min-width: 350px;
+    max-width: 50%;
+    height: fit-content;
   }
 }
 

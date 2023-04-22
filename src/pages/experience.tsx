@@ -3,20 +3,20 @@ import * as Tabs from '@radix-ui/react-tabs';
 export default function Experience() {
     return (
         <div id='experience' className='exp-container'>
-            <h1 id='exp-header' className='section-header'>Experience</h1>
+            <h1 id='exp-header' className='section-header gradient'>Experience</h1>
             <div className='exp-tabs'>
                 <Tabs.Root className='TabsRoot' defaultValue='Tab1' orientation="vertical" style={{display: 'flex'}}>
                     <Tabs.List className='TabsList tab-list' aria-label='Past Experience' style={{display: 'flex', flexDirection: 'column'}}>
-                        <Tabs.Trigger className='TabsTrigger tab tab-1' value="Tab1">
+                        <Tabs.Trigger className='TabsTrigger tab tab-1 btn-gradient' value="Tab1">
                             Founder of crate.digital
                         </Tabs.Trigger>
-                        <Tabs.Trigger className='TabsTrigger tab tab-2' value="Tab2">
+                        <Tabs.Trigger className='TabsTrigger tab tab-2 btn-gradient' value="Tab2">
                             Freelance Developer
                         </Tabs.Trigger>
-                        <Tabs.Trigger className='TabsTrigger tab tab-3' value="Tab3">
+                        <Tabs.Trigger className='TabsTrigger tab tab-3 btn-gradient' value="Tab3">
                             Software Engineer @ FAST Enterprises
                         </Tabs.Trigger>
-                        <Tabs.Trigger className='TabsTrigger tab tab-4' value="Tab4">
+                        <Tabs.Trigger className='TabsTrigger tab tab-4 btn-gradient' value="Tab4">
                             University of Georgia
                         </Tabs.Trigger>
                     </Tabs.List>

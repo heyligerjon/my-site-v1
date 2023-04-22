@@ -41,7 +41,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
 
   return (
     <div id='contact' className='contact-container'>
-        <h1 id='contact-header' className='section-header'>Contact</h1>
+        <h1 id='contact-header' className='section-header gradient'>Contact</h1>
         <Form.Root id='contact-form' className='FormRoot contact-form' onSubmit={handleSubmit}>
             <Form.Field className='FormField field' name='name'>
                 <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between' }}>
@@ -104,7 +104,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
 
             <div className='submit-div'>
                 <Form.Submit asChild>
-                    <button className='submit-btn' type="submit" disabled={isLoading}>
+                    <button className='submit-btn btn-gradient' type="submit" disabled={isLoading}>
                         {isLoading ? 'Submitting...' : 'Submit'}
                     </button>
                 </Form.Submit>

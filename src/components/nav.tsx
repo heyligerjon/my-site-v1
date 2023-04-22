@@ -9,7 +9,7 @@ return (
         <NavigationMenu.List className='NavigationMenuList nav-links'>
             <NavigationMenu.Item>
                 <NavigationMenu.Trigger className='NavigationMenuTrigger'>
-                    <HamburgerMenuIcon className='nav-icon filter-navy' width={40} height={40}/>
+                    <HamburgerMenuIcon className='nav-icon' width={40} height={40}/>
                 </NavigationMenu.Trigger>
                 <NavigationMenu.Content className='NavigationMenuContent'>
                     <NavigationMenu.Link asChild>

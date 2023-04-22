@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Featured() {
     return (
         <div id='featured' className='feat-container'>
-          <h1 id='feat-header' className='section-header'>Featured Projects</h1>
+          <h1 id='feat-header' className='section-header gradient'>Featured Projects</h1>
           <div className='project-carousel'>
             <ul className='featured-projects'>
                 <li id='project-1' className='project'>

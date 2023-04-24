@@ -6,7 +6,7 @@ export default function Experience() {
             <h1 id='exp-header' className='section-header gradient'>Experience</h1>
             <div className='exp-tabs'>
                 <Tabs.Root className='TabsRoot' defaultValue='Tab1' orientation="vertical" style={{display: 'flex'}}>
-                    <Tabs.List className='TabsList tab-list' aria-label='Past Experience' style={{display: 'flex', flexDirection: 'column'}}>
+                    <Tabs.List className='TabsList tab-list' aria-label='Past Experience'>
                         <Tabs.Trigger className='TabsTrigger tab tab-1 btn-gradient' value="Tab1">
                             Founder of crate.digital
                         </Tabs.Trigger>

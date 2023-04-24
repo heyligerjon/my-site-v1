@@ -49,9 +49,7 @@ export default function Home() {
                     <NavigationMenu.Item className='nav-item nav-1'>
                         <NavigationMenu.Link asChild>
                             <Link href='#featured' className='nav nav-link nav-featured'>
-                                <div style={{width: '100px'}}>
-                                    <StarIcon className='nav-icon' width={200} height={100}/>
-                                </div>
+                                <StarIcon className='nav-icon filter-navy' width={200} height={100}/>
                                 <p className='nav-p'>Featured Projects</p>
                             </Link>
                         </NavigationMenu.Link>

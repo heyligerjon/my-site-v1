@@ -11,17 +11,6 @@ ol {
   padding: 0;
 }
 
-:root {
-  --foreground-rgb: $background-dark;
-  --background-rgb: $background-light;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: $background-light;
-    --background-rgb: $background-light;
-  }
-}
 /* Basic Styles */
 body {
   font-family: "InterstateMono", "Caraque", monospace, sans-serif;
@@ -40,7 +29,8 @@ body {
 
 /* Component Styles */
 .filter-navy {
-  color: #021e36;
+  color: inherit;
+  background-color: inherit;
 }
 
 .gradient {
@@ -88,7 +78,7 @@ code {
 
 .feat-container, .exp-container, .about-container, .contact-container {
   margin: 0 3rem 10rem;
-  height: 100vh;
+  height: 800px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -133,6 +123,9 @@ code {
 .home-container .home-nav {
   width: 25%;
 }
+.home-container .home-nav div {
+  width: 100%;
+}
 .home-container .home-nav li {
   display: flex;
   align-items: center;
@@ -141,8 +134,7 @@ code {
   border-bottom: 2px solid #021e36;
   border-radius: 30px 0 0 30px;
   padding: 0.5rem 3rem 0.5rem 1rem;
-  margin-top: 1.5rem;
-  margin-left: 9.5rem;
+  margin-top: 2rem;
 }
 .home-container .home-nav li a {
   display: flex;
@@ -153,10 +145,6 @@ code {
   padding-left: 7rem;
   width: 100px;
 }
-.home-container .home-nav li:hover {
-  margin-left: 0rem;
-  transition: 0.4s;
-}
 
 .nav-icon {
   width: 75px;
@@ -165,45 +153,25 @@ code {
 .welcome-container {
   display: flex;
   flex-direction: column;
+  position: relative;
   align-items: flex-start;
   justify-content: center;
   width: 100%;
 }
 
 /* Experience Styles */
-.exp-tabs {
-  display: flex;
-  justify-content: center;
-}
-.exp-tabs .TabsRoot {
-  width: 100%;
-  justify-content: center;
-}
-
 .tab {
-  height: fit-content;
-  border-top: 2px solid #021e36;
-  border-left: 2px solid #021e36;
-  border-bottom: 2px solid #021e36;
-  border-radius: 15px 0 0 15px;
   padding: 1rem;
 }
 
-.tab:active, .tab:focus, .tab:hover {
+.tab:active, .tab:focus, .tab:hover, .tab:target {
   background-color: #021e36;
   color: #f8f5eb;
   transition: 0.25s;
 }
 
-.tab-list {
-  max-width: 30%;
-}
-
 .tab-content {
-  border: 2px solid #021e36;
-  border-radius: 0 15px 15px 0;
   padding: 1rem;
-  width: 50%;
 }
 .tab-content h5 {
   font-size: 10pt;
@@ -290,11 +258,47 @@ footer {
 /* Responsive Styles */
 @media screen and (min-width: 320px) {
   /* Styles for mobile devices */
+  main {
+    max-width: 480px;
+  }
   .mobile-nav {
     display: flex;
   }
   .home-nav {
     display: none;
+  }
+  .exp-tabs {
+    display: flex;
+    justify-content: center;
+  }
+  .exp-tabs .TabsRoot {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .exp-tabs .tab-list {
+    display: flex;
+    flex-direction: row;
+    align-items: last baseline;
+    justify-content: space-between;
+    overflow-x: scroll;
+    width: 100%;
+    padding-right: -1rem;
+  }
+  .tab {
+    display: flex;
+    align-items: last baseline;
+    height: fit-content;
+    border-top: 2px solid #021e36;
+    border-left: 2px solid #021e36;
+    border-right: 2px solid #021e36;
+    border-radius: 15px 15px 0 0;
+    width: fit-content;
+  }
+  .tab-content {
+    border: 2px solid #021e36;
+    border-radius: 0 0 15px 15px;
+    width: 100%;
   }
   .about-content {
     display: flex;
@@ -311,11 +315,48 @@ footer {
 }
 @media screen and (min-width: 480px) {
   /* Styles for small devices */
+  main {
+    max-width: 768px;
+  }
   .mobile-nav {
     display: flex;
   }
   .home-nav {
     display: none;
+  }
+  .exp-tabs {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .exp-tabs .TabsRoot {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .exp-tabs .tab-list {
+    display: flex;
+    flex-direction: row;
+    align-items: last baseline;
+    justify-content: space-between;
+    overflow-x: auto;
+    width: 100%;
+    padding-right: -1rem;
+  }
+  .tab {
+    display: flex;
+    align-items: last baseline;
+    height: fit-content;
+    border-top: 2px solid #021e36;
+    border-left: 2px solid #021e36;
+    border-right: 2px solid #021e36;
+    border-radius: 15px 15px 0 0;
+    width: fit-content;
+  }
+  .tab-content {
+    border: 2px solid #021e36;
+    border-radius: 0 0 15px 15px;
+    width: 100%;
   }
   .about-content {
     display: flex;
@@ -324,19 +365,63 @@ footer {
   }
   .about-content .about-img {
     width: 300px;
+    margin-right: 1rem;
     margin-bottom: 3rem;
   }
   .about-content .about-detail {
     min-width: 300px;
+    margin-bottom: 3rem;
   }
 }
 @media screen and (min-width: 768px) {
   /* Styles for tablets */
+  main {
+    max-width: 960px;
+  }
   .mobile-nav {
     display: none;
   }
   .home-nav {
     display: flex;
+    width: 100%;
+  }
+  .home-nav .nav-item {
+    margin-left: 6rem;
+  }
+  .home-nav .nav-item:hover {
+    background-color: #021e36;
+    color: #f8f5eb;
+    margin-left: 0rem;
+    transition: 0.4s;
+  }
+  .exp-tabs {
+    display: flex;
+    justify-content: center;
+  }
+  .exp-tabs .TabsRoot {
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .exp-tabs .tab-list {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    max-width: 380px;
+  }
+  .tab {
+    display: flex;
+    border-top: 2px solid #021e36;
+    border-left: 2px solid #021e36;
+    border-bottom: 2px solid #021e36;
+    border-radius: 15px 0 0 15px;
+    width: 100%;
+  }
+  .tab-content {
+    border: 2px solid #021e36;
+    border-radius: 0 15px 15px 0;
+    width: 50%;
+    max-width: 700px;
   }
   .about-content {
     display: flex;
@@ -354,11 +439,52 @@ footer {
 }
 @media screen and (min-width: 960px) {
   /* Styles for desktops */
+  main {
+    max-width: 100vw;
+  }
   .mobile-nav {
     display: none;
   }
   .home-nav {
     display: flex;
+    width: 100%;
+  }
+  .home-nav .nav-item {
+    margin-left: 0rem;
+  }
+  .home-nav .nav-item:hover {
+    background-color: #021e36;
+    color: #f8f5eb;
+    margin-left: 0rem;
+    transition: 0.4s;
+  }
+  .exp-tabs {
+    display: flex;
+    justify-content: center;
+  }
+  .exp-tabs .TabsRoot {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  .exp-tabs .tab-list {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    max-width: 380px;
+  }
+  .tab {
+    display: flex;
+    border-top: 2px solid #021e36;
+    border-left: 2px solid #021e36;
+    border-bottom: 2px solid #021e36;
+    border-radius: 15px 0 0 15px;
+    width: 100%;
+  }
+  .tab-content {
+    border: 2px solid #021e36;
+    border-radius: 0 15px 15px 0;
+    width: 50%;
   }
   .about-content {
     display: flex;

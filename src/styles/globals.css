@@ -251,11 +251,13 @@ code {
 /* Footer Styles */
 footer {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   background-color: #021e36;
   color: #f8f5eb;
   margin-top: -5rem;
-  padding: 5rem 0;
+  padding: 5rem 3rem;
 }
 
 /* Responsive Styles */
@@ -394,7 +396,7 @@ footer {
   .home-nav .nav-item:hover {
     background-color: #021e36;
     color: #f8f5eb;
-    margin-left: 0rem;
+    margin-left: -3rem;
     transition: 0.4s;
   }
   .exp-tabs {
@@ -453,12 +455,12 @@ footer {
     width: 100%;
   }
   .home-nav .nav-item {
-    margin-left: 0rem;
+    margin-left: -5rem;
   }
   .home-nav .nav-item:hover {
     background-color: #021e36;
     color: #f8f5eb;
-    margin-left: 0rem;
+    margin-left: -5rem;
     transition: 0.4s;
   }
   .exp-tabs {

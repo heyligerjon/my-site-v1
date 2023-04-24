@@ -46,7 +46,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
             <Form.Field className='FormField field' name='name'>
                 <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between' }}>
                     <Form.Label className='FormLabel' htmlFor="name">Name</Form.Label>
-                    <Form.Message className="FormMessage" match="valueMissing">
+                    <Form.Message className="FormMessage gradient" match="valueMissing">
                         Please enter your name
                     </Form.Message>
                 </div>
@@ -64,10 +64,10 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
             <Form.Field className='FormField field' name='email'>
                 <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between' }}>
                     <Form.Label className='FormLabel' htmlFor="email">Email</Form.Label>
-                    <Form.Message className="FormMessage" match="valueMissing">
+                    <Form.Message className="FormMessage gradient" match="valueMissing">
                         Please enter your email
                     </Form.Message>
-                    <Form.Message className="FormMessage" match="typeMismatch">
+                    <Form.Message className="FormMessage gradient" match="typeMismatch">
                         Please provide a valid email
                     </Form.Message>
                 </div>
@@ -85,6 +85,9 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
             <Form.Field className='FormField field' name='message'>
                 <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between' }}>
                     <Form.Label className='FormLabel' htmlFor="message">Message</Form.Label>
+                    <Form.Message className="FormMessage gradient" match="valueMissing">
+                        Please enter a message
+                    </Form.Message>
                 </div>
                     <Form.Control asChild>
                         <textarea
@@ -96,9 +99,6 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
                             placeholder='Hi!'
                         />
                     </Form.Control>
-                    <Form.Message className="FormMessage" match="valueMissing">
-                        Please enter a message
-                    </Form.Message>
             </Form.Field>
             {error && <p>{error}</p>}
 

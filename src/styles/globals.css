@@ -221,22 +221,25 @@ code {
 }
 #contact-form .field {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   margin-top: 1rem;
   width: fit-content;
 }
 #contact-form .field div {
-  width: 150px;
+  width: 100%;
+  margin-bottom: 0.5rem;
 }
 #contact-form .field input, #contact-form .field textarea {
   border: 1px solid #021e36;
   border-radius: 5px;
   background-color: shade(#f8f5eb, 200%);
   padding: 0.25rem 0.5rem;
-  width: 325px;
+  width: 350px;
 }
 #contact-form .field .FormMessage {
-  padding: 0 0 0 1rem;
+  margin-left: 1rem;
+  padding: 0.25rem;
+  border-radius: 10px;
 }
 #contact-form .submit-div {
   display: flex;

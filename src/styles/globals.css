@@ -20,6 +20,10 @@ body {
   background: #f8f5eb;
 }
 
+p {
+  white-space: pre-wrap;
+}
+
 .container {
   max-width: 960px;
   margin: 0 auto;
@@ -73,7 +77,7 @@ h1 {
 }
 
 code {
-  font-size: 22px;
+  font-size: 19px;
 }
 
 .feat-container, .exp-container, .about-container, .contact-container {
@@ -90,12 +94,12 @@ code {
 }
 
 #welcome-3 {
-  font-size: 24px;
+  font-size: 19px;
 }
 
 #welcome-2 {
   font-family: "InterstateMono", "Caraque", monospace;
-  font-size: 72px;
+  font-size: 62px;
   font-weight: bold;
 }
 
@@ -138,7 +142,6 @@ code {
 .home-container {
   display: flex;
   justify-content: space-between;
-  margin: 0 3rem;
   height: 900px;
 }
 .home-container .home-nav {
@@ -230,8 +233,8 @@ code {
   padding-top: 1em;
 }
 
-.tab-ul {
-  padding-top: 1rem;
+.blurb {
+  padding-bottom: 1rem;
 }
 
 .skills-list {
@@ -240,12 +243,16 @@ code {
   justify-content: space-evenly;
 }
 
+.skills-list-detail {
+  margin: 0 1em;
+}
+
 .exp-list, .skills-list {
   margin: 0 1em;
 }
 .exp-list .exp-list-detail, .exp-list .skills-list-detail, .skills-list .exp-list-detail, .skills-list .skills-list-detail {
   list-style: disc;
-  padding-bottom: 0.5rem;
+  padding-bottom: 1rem;
 }
 
 /* About Styles */
@@ -335,8 +342,15 @@ footer {
   .home-nav {
     display: none;
   }
-  .feat-container, .exp-container, .about-container, .contact-container {
-    height: 1080px;
+  .home-container {
+    margin: 0 3rem;
+  }
+  .feat-container, .exp-container, .contact-container {
+    height: 1200px;
+    align-items: center;
+  }
+  .about-container {
+    height: 1440px;
     align-items: center;
   }
   .exp-tabs {
@@ -400,8 +414,15 @@ footer {
   .home-nav {
     display: none;
   }
-  .feat-container, .exp-container, .about-container, .contact-container {
-    height: 900px;
+  .home-container {
+    margin: 0 3rem;
+  }
+  .feat-container, .exp-container, .contact-container {
+    height: 1080px;
+    align-items: center;
+  }
+  .about-container {
+    height: 1440px;
     align-items: center;
   }
   .exp-tabs {
@@ -473,9 +494,16 @@ footer {
     margin-left: 0rem;
     transition: 0.4s;
   }
-  .feat-container, .exp-container, .about-container, .contact-container {
-    height: 900px;
+  .home-container {
+    margin: 0 0 0 3rem;
+  }
+  .feat-container, .exp-container, .contact-container {
+    height: 1080px;
     align-items: flex-start;
+  }
+  .about-container {
+    height: 1200px;
+    align-items: center;
   }
   .exp-tabs {
     display: flex;
@@ -489,7 +517,8 @@ footer {
   .exp-tabs .tab-list {
     display: flex;
     flex-direction: column;
-    width: 25%;
+    overflow-x: visible;
+    width: 30%;
     max-width: 380px;
   }
   .tab {
@@ -513,6 +542,7 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: flex-start;
   }
   .about-content .about-img {
     width: 350px;
@@ -544,8 +574,11 @@ footer {
     margin-left: 0rem;
     transition: 0.4s;
   }
+  .home-container {
+    margin: 0 0 0 3rem;
+  }
   .feat-container, .exp-container, .about-container, .contact-container {
-    height: 720px;
+    height: 900px;
     align-items: flex-start;
   }
   .exp-tabs {
@@ -583,6 +616,7 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
   }
   .about-content .about-detail {
     min-width: 350px;

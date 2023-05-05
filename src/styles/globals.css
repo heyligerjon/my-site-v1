@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 /* Colors and theming */
+@font-face {
+  font-family: "InterstateMono";
+  src: url("/static/fonts/interstatemono.otf");
+}
+@font-face {
+  font-family: "Caraque";
+  src: url("/static/fonts/caraquesolid.otf");
+  font-weight: normal;
+  font-style: normal;
+}
 /* Reset CSS */
 html,
 body,

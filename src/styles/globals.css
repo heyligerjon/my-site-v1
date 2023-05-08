@@ -65,6 +65,14 @@ p {
   -webkit-text-fill-color: #f8f5eb;
 }
 
+.featurette {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 5rem;
+  width: 100%;
+}
+
 #about-button, .submit-btn {
   border: 2px solid #021e36;
   border-radius: 15px;
@@ -201,11 +209,122 @@ code {
 }
 
 /* FEATURED STYLES */
-.featurette {
+.project-carousel {
+  width: 100%;
+}
+.project-carousel .featured-projects {
   display: flex;
   flex-direction: row;
-  justify-content: center;
   width: 100%;
+  overflow: scroll auto;
+  scroll-snap-type: x mandatory;
+  padding: 0 25%;
+}
+.project-carousel .featured-projects h4 {
+  font-size: 24px;
+  padding-bottom: 3rem;
+  text-align: center;
+}
+.project-carousel .featured-projects .card {
+  height: 400px;
+  border: 2px solid #021e36;
+  border-radius: 30px;
+  padding: 1.5rem;
+  margin: 1rem 5rem;
+  width: 325px;
+}
+.project-carousel .featured-projects .card .project-img {
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+}
+.project-carousel .featured-projects .card .project-description {
+  display: none;
+  text-align: center;
+  padding-top: 2em;
+  z-index: 1;
+}
+.project-carousel .featured-projects .project-div {
+  scroll-snap-align: center;
+}
+.project-carousel .featured-projects .project-div:nth-child(1) .card {
+  background-image: url("/static/img/project1.png");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center;
+  background-color: #151515;
+}
+.project-carousel .featured-projects .project-div:nth-child(1) .card:hover {
+  background-image: none;
+  background-color: #f8f5eb;
+  transition: all ease-in-out 0.5s;
+}
+.project-carousel .featured-projects .project-div:nth-child(1) .card:hover .project-description {
+  display: block;
+}
+.project-carousel .featured-projects .project-div:nth-child(2) .card {
+  background-image: url("/static/img/project2.png");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center;
+  background-color: #021e36;
+  background-size: cover;
+}
+.project-carousel .featured-projects .project-div:nth-child(2) .card:hover {
+  background-image: none;
+  background-color: #f8f5eb;
+  transition: all ease-in-out 0.5s;
+}
+.project-carousel .featured-projects .project-div:nth-child(2) .card:hover .project-description {
+  display: block;
+}
+.project-carousel .featured-projects .project-div:nth-child(3) .card {
+  background-image: url("/static/img/project3.png");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center;
+  background-color: #021e36;
+  background-size: cover;
+}
+.project-carousel .featured-projects .project-div:nth-child(3) .card:hover {
+  background-image: none;
+  background-color: #f8f5eb;
+  transition: all ease-in-out 0.5s;
+}
+.project-carousel .featured-projects .project-div:nth-child(3) .card:hover .project-description {
+  display: block;
+}
+.project-carousel .featured-projects .project-div:nth-child(4) .card {
+  background-image: url("/static/img/project4.png");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center;
+  background-color: #021e36;
+  background-size: cover;
+}
+.project-carousel .featured-projects .project-div:nth-child(4) .card:hover {
+  background-image: none;
+  background-color: #f8f5eb;
+  transition: all ease-in-out 0.5s;
+}
+.project-carousel .featured-projects .project-div:nth-child(4) .card:hover .project-description {
+  display: block;
+}
+.project-carousel .featured-projects .project-div:nth-child(5) .card {
+  background-image: url("/static/img/project5.png");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center;
+  background-color: #021e36;
+  background-size: cover;
+}
+.project-carousel .featured-projects .project-div:nth-child(5) .card:hover {
+  background-image: none;
+  background-color: #f8f5eb;
+  transition: all ease-in-out 0.5s;
+}
+.project-carousel .featured-projects .project-div:nth-child(5) .card:hover .project-description {
+  display: block;
 }
 
 /* EXPERIENCE STYLES */

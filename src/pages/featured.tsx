@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Link from 'next/link'
 //import Carousel from '@/components/carousel';
 
 export default function Featured() {
@@ -9,7 +9,16 @@ export default function Featured() {
                 <div className='project-carousel'>
                     <ul className='featured-projects'>
                         <li id='project-1' className='project-div'>
-                            <h4 className='project-header'><code>crate.digital</code></h4>
+                            <h4 className='project-header'>
+                                <Link 
+                                href='https://www.crate.digital' 
+                                className='crate-link'
+                                target='_blank'
+                                rel='noopener'
+                                >
+                                    <code style={{fontSize: '24px'}}> crate.digital </code>
+                                </Link>
+                            </h4>
                             <div className="card">
                                 <p className='project-description'>
                                     <code>crate.digital</code> is an upcoming blog and digital media site focused on creating a space to promote underground musicians and artists organically. Like digging through a digital record crate.

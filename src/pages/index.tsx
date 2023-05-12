@@ -27,14 +27,14 @@ export default function Home() {
                     J. Isaacs
                 </p>
                 <p id='welcome-3'>    
-                    Founder of
+                    Founder of 
                 <Link 
                 href='https://www.crate.digital' 
                 className='crate-link'
                 target='_blank'
                 rel='noopener'
                 >
-                    <code className='font-mono font-bold'> crate.digital </code>
+                    <code style={{fontSize: '19px'}}> crate.digital </code>
                 </Link>
                     and Full-stack Web Developer
                 </p>

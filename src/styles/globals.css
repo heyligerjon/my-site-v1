@@ -12,6 +12,10 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "GlassTTY";
+  src: url("/static/fonts/Glass_TTY_VT220.ttf");
+}
 /* Reset CSS */
 html,
 body,
@@ -95,7 +99,12 @@ h1 {
 }
 
 code {
+  font-family: "GlassTTY";
   font-size: 19px;
+}
+
+code:hover {
+  color: #4AF626;
 }
 
 .feat-container, .exp-container, .about-container, .contact-container {

@@ -313,7 +313,7 @@ code {
   transition: all ease-in-out 0.5s;
 }
 .project-carousel .featured-projects .project-div:nth-child(4) .card:hover .project-description {
-  display: block;
+  display: none;
 }
 .project-carousel .featured-projects .project-div:nth-child(5) .card {
   background-image: none;
@@ -329,7 +329,7 @@ code {
   transition: all ease-in-out 0.5s;
 }
 .project-carousel .featured-projects .project-div:nth-child(5) .card:hover .project-description {
-  display: block;
+  display: none;
 }
 
 /* EXPERIENCE STYLES */

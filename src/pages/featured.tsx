@@ -21,7 +21,7 @@ export default function Featured() {
                             </h4>
                             <div className="card">
                                 <p className='project-description'>
-                                    <code>crate.digital</code> is an upcoming blog and digital media site focused on creating a space to promote underground musicians and artists organically. Like digging through a digital record crate.
+                                    <code>crate.digital</code> is an upcoming blog and digital media site focused on creating a space to promote underground musicians and artists organically. Like you're digging through a digital record crate.
                                 </p>
                             </div>
                         </li>

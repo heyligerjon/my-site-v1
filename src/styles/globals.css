@@ -103,10 +103,6 @@ code {
   font-size: 19px;
 }
 
-code:hover {
-  color: #4AF626;
-}
-
 .feat-container, .exp-container, .about-container, .contact-container {
   margin: 0 3rem 10rem;
   height: 900px;

@@ -42,7 +42,8 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
   return (
     <div id='contact' className='contact-container'>
         <h1 id='contact-header' className='section-header gradient'>Contact</h1>
-        <Form.Root id='contact-form' className='FormRoot contact-form' onSubmit={handleSubmit}>
+        <Form.Root id='contact-form' className='FormRoot contact-form' action='https://api.web3forms.com/submit' method='POST'>
+            <input type="hidden" name="access_key" value="fcbdd708-6581-4f6b-abe8-752f86af47cd" />
             <Form.Field className='FormField field' name='name'>
                 <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between' }}>
                     <Form.Label className='FormLabel' htmlFor="name">Name</Form.Label>
@@ -106,12 +107,13 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
 
             <div className='submit-div'>
                 <Form.Submit asChild>
-                    <button className='submit-btn btn-gradient' type="submit" disabled={isLoading}>
+                    <button className='submit-btn btn-gradient' type="submit" disabled={isLoading} rel='noopener'>
                         {isLoading ? 'Submitting...' : 'Submit'}
                     </button>
                 </Form.Submit>
             </div>
         </Form.Root>
+        <script src="https://web3forms.com/client/script.js" async defer></script>
     </div>
   );
 };

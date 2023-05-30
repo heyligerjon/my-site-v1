@@ -24,7 +24,7 @@ export default function Home() {
                     Hello, my name is
                 </p>
                 <p id='welcome-2' className='gradient'> 
-                    J. Isaacs
+                    J Isaacs
                 </p>
                 <p id='welcome-3'>    
                     Founder of 

@@ -7,15 +7,15 @@ export default function ContactForm() {
   const [message, setMessage] = useState('');
 
   return (
-    <div id='contact' className='contact-container'>
-        <h1 id='contact-header' className='section-header gradient-text'>Contact</h1>
-        <Form.Root id='contact-form' className='FormRoot contact-form' action='https://api.web3forms.com/submit' method='POST'>
+    <div id='contact' className='container flex flex-col items-center'>
+        <h1 id='contact-header' className='section-header gradient-text'>Contact Me</h1>
+        <Form.Root id='contact-form' className='FormRoot text-sm w-fit' action='https://api.web3forms.com/submit' method='POST'>
             <input type="hidden" name="access_key" value="fcbdd708-6581-4f6b-abe8-752f86af47cd" />
             <Form.Field className='FormField field' name='name'>
-                <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between' }}>
+                <div className='label flex'>
                     <Form.Label className='FormLabel' htmlFor="name">Name</Form.Label>
-                    <Form.Message className="FormMessage gradient" match="valueMissing">
-                        Please enter your name
+                    <Form.Message className="FormMessage gradient-text-2" match="valueMissing">
+                        Name Required
                     </Form.Message>
                 </div>
                 <Form.Control asChild>
@@ -29,15 +29,14 @@ export default function ContactForm() {
                     />
                 </Form.Control>
             </Form.Field>
-
             <Form.Field className='FormField field' name='email'>
-                <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between' }}>
+                <div className='label flex'>
                     <Form.Label className='FormLabel' htmlFor="email">Email</Form.Label>
-                    <Form.Message className="FormMessage gradient" match="valueMissing">
-                        Please enter your email
+                    <Form.Message className="FormMessage gradient-text-2" match="valueMissing">
+                        Email Required
                     </Form.Message>
-                    <Form.Message className="FormMessage gradient" match="typeMismatch">
-                        Please provide a valid email
+                    <Form.Message className="FormMessage gradient-text-2" match="typeMismatch">
+                        Error: Invalid Email
                     </Form.Message>
                 </div>
                     <Form.Control asChild>
@@ -53,17 +52,17 @@ export default function ContactForm() {
             </Form.Field>
 
             <Form.Field className='FormField field' name='message'>
-                <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between' }}>
+                <div className='label flex'>
                     <Form.Label className='FormLabel' htmlFor="message">Message</Form.Label>
-                    <Form.Message className="FormMessage gradient" match="valueMissing">
+                    <Form.Message className="FormMessage gradient-text-2" match="valueMissing">
                         Please enter a message
                     </Form.Message>
                 </div>
                     <Form.Control asChild>
                         <textarea
                             id="message"
+                            className='h-60'
                             value={message}
-                            style={{height: '150px'}}
                             onChange={(e) => setMessage(e.target.value)}
                             required
                             placeholder='Hi!'
@@ -71,9 +70,9 @@ export default function ContactForm() {
                     </Form.Control>
             </Form.Field>
 
-            <div className='submit-div'>
+            <div className='flex justify-center my-8'>
                 <Form.Submit asChild>
-                    <button className='submit-btn btn-gradient' type="submit">
+                    <button className='btn-gradient border-dark p-3' type="submit">
                         Submit
                     </button>
                 </Form.Submit>

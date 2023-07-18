@@ -1,7 +1,11 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-export default function Welcome(width:number) {
+interface Props {
+    width: number
+}
+
+export default function Welcome({ width }: Props) {
     let nameSize
     let introSize
     let linksSize

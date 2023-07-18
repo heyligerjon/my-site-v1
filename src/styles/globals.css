@@ -35,7 +35,6 @@ input, textarea {
 
 .container {
   min-height: 700px;
-  height: 100vh;
 }
 
 /* THEMING, ANIMATIONS, & COLORS */
@@ -129,6 +128,7 @@ code {
 .nav-link:hover, .nav-link:focus, .nav-link:active {
   background-color: #021e36;
   color: #f8f5eb;
+  transition: 0.1s;
 }
 
 /* HOMEPAGE STYLES */
@@ -318,23 +318,7 @@ code {
   padding-bottom: 1rem;
 }
 
-/* About Styles */
-.about-img {
-  border: 2px solid #021e36;
-  border-radius: 62.5px;
-  padding: 0.75rem;
-}
-
-.image {
-  border-radius: 50px;
-}
-
-.about-detail {
-  border: 2px solid #021e36;
-  border-radius: 50px;
-  padding: 25px;
-}
-
+/* ABOUT STYLES */
 /* CONTACT STYLES */
 #contact-form .field {
   display: flex;
@@ -395,18 +379,6 @@ code {
     border-radius: 0 0 15px 15px;
     width: 100%;
   }
-  .about-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .about-content .about-img {
-    width: 300px;
-    margin-bottom: 3rem;
-  }
-  .about-content .about-detail {
-    min-width: 300px;
-  }
 }
 @media screen and (min-width: 480px) {
   /* Styles for small devices */
@@ -453,20 +425,6 @@ code {
     border-radius: 0 0 15px 15px;
     width: 100%;
   }
-  .about-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .about-content .about-img {
-    width: 300px;
-    margin-right: 1rem;
-    margin-bottom: 3rem;
-  }
-  .about-content .about-detail {
-    min-width: 300px;
-    margin-bottom: 3rem;
-  }
 }
 @media screen and (min-width: 768px) {
   /* Styles for tablets */
@@ -512,20 +470,6 @@ code {
     width: 50%;
     max-width: 700px;
   }
-  .about-content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: flex-start;
-  }
-  .about-content .about-img {
-    width: 350px;
-  }
-  .about-content .about-detail {
-    min-width: 300px;
-    max-width: 50%;
-    height: fit-content;
-  }
 }
 @media screen and (min-width: 960px) {
   /* Styles for desktops */
@@ -566,17 +510,6 @@ code {
     border-radius: 0 15px 15px 0;
     width: 50%;
   }
-  .about-content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-  }
-  .about-content .about-detail {
-    min-width: 350px;
-    max-width: 50%;
-    height: fit-content;
-  }
 }
 @media screen and (min-width: 1200px) {
   /* Styles for large desktops */
@@ -616,17 +549,6 @@ code {
     border: 2px solid #021e36;
     border-radius: 0 15px 15px 0;
     width: 50%;
-  }
-  .about-content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-  }
-  .about-content .about-detail {
-    min-width: 350px;
-    max-width: 50%;
-    height: fit-content;
   }
 }
 

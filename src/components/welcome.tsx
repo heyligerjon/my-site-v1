@@ -21,7 +21,6 @@ function useWindowSize() {
 }
 
 export default function Welcome() {
-
     const [width, height] = useWindowSize();
 
     let nameSize

@@ -1,4 +1,4 @@
-import React, { useState, useLayoutEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import Image from "next/image";
 
 const imgSrc = 'project3.png'
@@ -7,7 +7,7 @@ const blurb = `\tGrowing up in Atlanta, I faced countless challenges as I follow
 // window resize hook
 function useWindowSize() {
     const [size, setSize] = useState([0, 0]);
-    useLayoutEffect(() => {
+    useEffect(() => {
       function updateSize() {
         setSize([window.innerWidth, window.innerHeight]);
       }

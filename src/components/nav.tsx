@@ -4,7 +4,7 @@ import { HamburgerMenuIcon } from '@radix-ui/react-icons';
 
 export default function Nav() {
 return (
-    <NavigationMenu.Root className='NavigationMenuRoot w-full absolute z-20 bg-light' delayDuration={99999999}>
+    <NavigationMenu.Root id='navbar' className='NavigationMenuRoot w-full absolute z-20 bg-light' delayDuration={99999999}>
         <NavigationMenu.List className='NavigationMenuList border-b border-dark'>
             <NavigationMenu.Item className='h-fit flex flex-col'>
                 <NavigationMenu.Trigger className='NavigationMenuTrigger'>

@@ -41,8 +41,8 @@ export default function About() {
                     <div className='self-center my-4'>
                         <Image className='' src={`/static/img/${imgSrc}`} alt='J. Isaacs' width={imgSz} height={imgSz}/>
                     </div>
-                    <div className={`flex ${sz} self-center p-4 -mt-32 mb-32 mx-8 border-2 border-dark`}>
-                        <p>
+                    <div className={`flex ${sz} self-center p-4 -mt-32 mb-32 mx-8 border-2 border-dark bg-trans`}>
+                        <p className='opacity-100'>
                             {blurb}
                         </p>
                     </div>

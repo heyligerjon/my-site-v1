@@ -10,36 +10,9 @@ ol {
   padding: 0;
 }
 
-/* FONTS */
-@font-face {
-  font-family: "InterstateMono";
-  src: url("/static/fonts/interstatemono.otf");
-}
-@font-face {
-  font-family: "Wired";
-  src: url("/static/fonts/WiredRegular.otf");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "GlassTTY";
-  src: url("/static/fonts/Glass_TTY_VT220.ttf");
-}
-code {
-  font-family: "GlassTTY";
-}
-
-.mono {
-  font-family: "InterstateMono", monospace;
-}
-
-.wired {
-  font-family: "Wired", sans-serif;
-}
-
 /* BASIC STYLES */
 body {
-  font-family: "IBM Plex Mono";
+  font-family: "InterstateMono", "Caraque", monospace, sans-serif;
   font-size: 16px;
   color: #021e36;
   line-height: 1.5;
@@ -67,11 +40,6 @@ input, textarea {
 /* THEMING, ANIMATIONS, & COLORS */
 .bg-light {
   background-color: #f8f5eb;
-  color: #021e36;
-}
-
-.bg-trans {
-  background-color: rgba(248, 245, 235, 0.5);
   color: #021e36;
 }
 
@@ -125,6 +93,33 @@ input, textarea {
   -webkit-background-clip: unset;
   -webkit-text-fill-color: #f8f5eb;
   transition: ease-in 0.3s;
+}
+
+/* FONTS */
+@font-face {
+  font-family: "InterstateMono";
+  src: url("/static/fonts/interstatemono.otf");
+}
+@font-face {
+  font-family: "Wired";
+  src: url("/static/fonts/WiredRegular.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GlassTTY";
+  src: url("/static/fonts/Glass_TTY_VT220.ttf");
+}
+code {
+  font-family: "GlassTTY";
+}
+
+.mono {
+  font-family: "InterstateMono", monospace;
+}
+
+.wired {
+  font-family: "Wired", sans-serif;
 }
 
 /* COMPONENTS */
@@ -563,4 +558,4 @@ input, textarea {
   }
 }
 
-/*# sourceMappingURL=globals.css.map */
+/*# sourceMappingURL=index.css.map */

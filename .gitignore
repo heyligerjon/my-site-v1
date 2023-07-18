@@ -18,7 +18,7 @@
 # misc
 .DS_Store
 *.pem
-/public/static/radix-icons/
+/public/static/**/
 
 # debug
 npm-debug.log*

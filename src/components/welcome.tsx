@@ -1,3 +1,4 @@
+import React, { useState, useLayoutEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -5,27 +6,50 @@ interface Props {
     width: number
 }
 
-export default function Welcome({ width }: Props) {
+// window resize hook
+function useWindowSize() {
+    const [size, setSize] = useState([0, 0]);
+    useLayoutEffect(() => {
+      function updateSize() {
+        setSize([window.innerWidth, window.innerHeight]);
+      }
+      window.addEventListener('resize', updateSize);
+      updateSize();
+      return () => window.removeEventListener('resize', updateSize);
+    }, []);
+    return size;
+}
+
+export default function Welcome() {
+
+    const [width, height] = useWindowSize();
+
     let nameSize
     let introSize
     let linksSize
-    if(width <= 360) {
+    if(width <= 468) {
         nameSize = 'text-5xl'
         introSize = 'text-md'
         linksSize = 'text-sm'
     }
+    else {
+        nameSize = 'text-6xl'
+        introSize = 'text-xl'
+        linksSize = 'text-lg'
+    }
+
     return(
         <div id='welcome' className='border-2 border-dark m-5'>
             <div id='home-text' className='p-4'>
                 <Image className='image' src='/static/img/j-isaacs-headshot2.jpg' alt='J. Isaacs headshot' width={100} height={100}/>
-                <p id='name' className='text-5xl gradient-text wired pt-1.5'> 
+                <p id='name' className={`${nameSize} gradient-text wired pt-1.5`}> 
                     j.isaacs
                 </p>
-                <p id='intro' className='text-md pt-3'>    
+                <p id='intro' className={`${introSize} pt-3`}>    
                     Freelance Developer & Digital Creator
                 </p>
             </div>
-            <div id='home-links' className='flex text-sm w-full gradient'>
+            <div id='home-links' className={`flex ${linksSize} w-full gradient`}>
                 <button id='about-button' className='btn w-1/4 px-4 py-2'>
                     <Link href='about'>
                         About

@@ -1,5 +1,4 @@
 import * as NavigationMenu from '@radix-ui/react-navigation-menu';
-import Image from 'next/image';
 import Link from "next/link";
 import { HamburgerMenuIcon } from '@radix-ui/react-icons';
 
@@ -18,13 +17,13 @@ return (
                         </Link>
                     </NavigationMenu.Link>
                     <NavigationMenu.Link asChild>
-                        <Link href='#about' className='nav nav-link nav-about'>
+                        <Link href='about' className='nav nav-link nav-about'>
                             <p className='nav-p'>About</p>
                         </Link>
                     </NavigationMenu.Link>
                     <NavigationMenu.Link asChild>
-                        <Link href='#featured' className='nav nav-link nav-featured'>
-                            <p className='nav-p'>Featured Projects</p>
+                        <Link href='gallery' className='nav nav-link nav-gallery'>
+                            <p className='nav-p'>Gallery</p>
                         </Link>
                     </NavigationMenu.Link>
                     <NavigationMenu.Link asChild>
@@ -38,13 +37,13 @@ return (
                         </Link>
                     </NavigationMenu.Link>
                     <NavigationMenu.Link asChild>
-                        <Link href='#experience' className='nav nav-link nav-exp'>
-                            <p className='nav-p'>Experience</p>
+                        <Link href='#contact' className='nav nav-link nav-contact'>
+                            <p className='nav-p'>Contact</p>
                         </Link>
                     </NavigationMenu.Link>
                     <NavigationMenu.Link asChild>
-                        <Link href='#contact' className='nav nav-link nav-contact'>
-                            <p className='nav-p'>Contact</p>
+                        <Link href='experience' className='nav nav-link nav-exp'>
+                            <p className='nav-p'>View My Resume</p>
                         </Link>
                     </NavigationMenu.Link>
                 </NavigationMenu.Content>

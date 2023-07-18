@@ -3,7 +3,7 @@ import * as Tabs from '@radix-ui/react-tabs';
 export default function Experience() {
     return (
         <div id='experience' className='exp-container'>
-            <h1 id='exp-header' className='section-header gradient'>Experience</h1>
+            <h1 id='exp-header' className='section-header gradient-text'>Experience</h1>
             <div className='exp-tabs featurette'>
                 <Tabs.Root className='TabsRoot' defaultValue='Tab1' orientation="vertical" style={{display: 'flex'}}>
                     <Tabs.List className='TabsList tab-list' aria-label='Past Experience'>

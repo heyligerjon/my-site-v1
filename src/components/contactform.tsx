@@ -1,47 +1,14 @@
 import React, { useState } from 'react';
 import * as Form from '@radix-ui/react-form';
 
-interface ContactFormProps {
-  onSubmit: () => void;
-}
-
-const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
+export default function ContactForm() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState('');
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsLoading(true);
-    setError('');
-
-    // try {
-    //   // Make an API call to submit the contact form data
-    //   await fetch('/api/contact', {
-    //     method: 'POST',
-    //     headers: {
-    //       'Content-Type': 'application/json',
-    //     },
-    //     body: JSON.stringify({
-    //       name,
-    //       email,
-    //       message,
-    //     }),
-    //   });
-    //   onSubmit(); // Callback function to handle successful form submission
-    // } catch (err) {
-    //   setError('Failed to submit form. Please try again later.'); // Set error state for error handling
-    // } finally {
-    //   setIsLoading(false);
-    // }
-    // }
-  };
 
   return (
     <div id='contact' className='contact-container'>
-        <h1 id='contact-header' className='section-header gradient'>Contact</h1>
+        <h1 id='contact-header' className='section-header gradient-text'>Contact</h1>
         <Form.Root id='contact-form' className='FormRoot contact-form' action='https://api.web3forms.com/submit' method='POST'>
             <input type="hidden" name="access_key" value="fcbdd708-6581-4f6b-abe8-752f86af47cd" />
             <Form.Field className='FormField field' name='name'>
@@ -103,12 +70,11 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
                         />
                     </Form.Control>
             </Form.Field>
-            {error && <p>{error}</p>}
 
             <div className='submit-div'>
                 <Form.Submit asChild>
-                    <button className='submit-btn btn-gradient' type="submit" disabled={isLoading} rel='noopener'>
-                        {isLoading ? 'Submitting...' : 'Submit'}
+                    <button className='submit-btn btn-gradient' type="submit">
+                        Submit
                     </button>
                 </Form.Submit>
             </div>
@@ -117,5 +83,3 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
     </div>
   );
 };
-
-export default ContactForm;

@@ -72,7 +72,7 @@ export default function ContactForm() {
 
             <div className='flex justify-center my-8'>
                 <Form.Submit asChild>
-                    <button className='btn-gradient border-dark p-3' type="submit">
+                    <button className='btn-gradient border-2 border-dark p-3' type="submit">
                         Send
                     </button>
                 </Form.Submit>

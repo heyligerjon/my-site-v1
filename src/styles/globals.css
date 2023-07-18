@@ -35,7 +35,7 @@ input, textarea {
 
 .container {
   min-height: 700px;
-  height: 110vh;
+  height: 100vh;
 }
 
 /* THEMING, ANIMATIONS, & COLORS */
@@ -132,7 +132,7 @@ code {
 }
 
 /* HOMEPAGE STYLES */
-/* FEATURED STYLES */
+/* GALLERY STYLES */
 .featurette {
   display: flex;
   flex-direction: row;
@@ -348,18 +348,6 @@ code {
   align-items: baseline;
   margin-bottom: 0.25rem;
   width: 100%;
-}
-
-/* FOOTER STYLES */
-footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #021e36;
-  color: #f8f5eb;
-  margin-top: -5rem;
-  padding: 5rem 3rem;
 }
 
 /* RESPONSIVE STYLES */

@@ -57,7 +57,7 @@ input, textarea {
 }
 
 .gradient-text {
-  background: linear-gradient(to right, #ff00ae, #021e36 80%);
+  background: linear-gradient(to top left, #ff00ae, #021e36 150%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -68,25 +68,31 @@ input, textarea {
 
 .btn {
   background: #f8f5eb;
+  background-size: 200% 100%;
+  background-position: top left;
 }
 
 .btn-gradient {
   background: linear-gradient(to bottom right, #021e36, #ff00ae);
+  background-size: 200% 100%;
+  background-position: top left;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .btn:hover {
   background: transparent;
+  background-position: bottom right;
   color: #f8f5eb;
-  transition: ease-in-out 0.1s;
+  transition: ease-in 0.3s;
 }
 
 .btn-gradient:hover {
-  background: #021e36;
+  background-position: bottom right;
   color: #f8f5eb;
+  -webkit-background-clip: unset;
   -webkit-text-fill-color: #f8f5eb;
-  transition: 0.1s;
+  transition: ease-in 0.3s;
 }
 
 /* FONTS */

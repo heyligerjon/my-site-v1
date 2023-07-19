@@ -112,6 +112,14 @@ input, textarea {
   -webkit-text-fill-color: transparent;
 }
 
+.btn-gradient-2 {
+  background: linear-gradient(to bottom left, #021e36, #ff00ae);
+  background-size: 200% 100%;
+  background-position: top left;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .btn:hover {
   background: transparent;
   background-position: bottom right;
@@ -121,6 +129,14 @@ input, textarea {
 
 .btn-gradient:hover {
   background-position: bottom right;
+  color: #f8f5eb;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: #f8f5eb;
+  transition: ease-in 0.3s;
+}
+
+.btn-gradient-2:hover {
+  background-position: bottom left;
   color: #f8f5eb;
   -webkit-background-clip: unset;
   -webkit-text-fill-color: #f8f5eb;
@@ -144,130 +160,29 @@ input, textarea {
 
 /* HOMEPAGE STYLES */
 /* GALLERY STYLES */
-.featurette {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-top: 5rem;
+.project-description {
+  visibility: hidden;
+  color: #f8f5eb;
+  text-align: center;
+  padding: 1rem 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.canvas {
+  background-color: white;
   width: 100%;
 }
 
-.project-carousel {
-  width: 100%;
+.canvas:hover .project-description {
+  visibility: visible;
+  background-color: rgba(2, 30, 54, 0.5);
+  color: #f8f5eb;
+  transition: ease-out 0.3s;
 }
-.project-carousel .featured-projects {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  overflow: scroll auto;
-  scroll-snap-type: x mandatory;
-  padding: 0 25%;
-}
-.project-carousel .featured-projects h4 {
-  font-size: 24px;
-  padding-bottom: 3rem;
-  text-align: center;
-}
-.project-carousel .featured-projects .card {
-  height: 400px;
-  border: 2px solid #021e36;
-  border-radius: 30px;
-  padding: 1.5rem;
-  margin: 1rem 5rem;
-  width: 325px;
-}
-.project-carousel .featured-projects .card .project-img {
-  height: 100%;
-  width: 100%;
-  z-index: 0;
-}
-.project-carousel .featured-projects .card .project-description {
-  display: block;
-  text-align: center;
-  padding-top: 2em;
-  z-index: 1;
-}
-.project-carousel .featured-projects .project-div {
-  scroll-snap-align: center;
-}
-.project-carousel .featured-projects .project-div:nth-child(1) .card {
-  background-image: none;
-  background-color: #f8f5eb;
-}
-.project-carousel .featured-projects .project-div:nth-child(1) .card:hover {
-  background-image: url("/static/img/project1.png");
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center;
-  background-color: #151515;
-  transition: ease-in-out 0.5s;
-}
-.project-carousel .featured-projects .project-div:nth-child(1) .card:hover .project-description {
-  display: none;
-}
-.project-carousel .featured-projects .project-div:nth-child(2) .card {
-  background-image: none;
-  background-color: #f8f5eb;
-}
-.project-carousel .featured-projects .project-div:nth-child(2) .card:hover {
-  background-image: url("/static/img/project3.png");
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center;
-  background-color: #021e36;
-  background-size: cover;
-  transition: all ease-in-out 1s;
-}
-.project-carousel .featured-projects .project-div:nth-child(2) .card:hover .project-description {
-  display: none;
-}
-.project-carousel .featured-projects .project-div:nth-child(3) .card {
-  background-image: none;
-  background-color: #f8f5eb;
-}
-.project-carousel .featured-projects .project-div:nth-child(3) .card:hover {
-  background-image: url("/static/img/project4.png");
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center;
-  background-color: #021e36;
-  background-size: cover;
-  transition: all ease-in-out 0.5s;
-}
-.project-carousel .featured-projects .project-div:nth-child(3) .card:hover .project-description {
-  display: none;
-}
-.project-carousel .featured-projects .project-div:nth-child(4) .card {
-  background-image: none;
-  background-color: #f8f5eb;
-}
-.project-carousel .featured-projects .project-div:nth-child(4) .card:hover {
-  background-image: url("/static/img/project5.png");
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center;
-  background-color: #021e36;
-  background-size: cover;
-  transition: all ease-in-out 0.5s;
-}
-.project-carousel .featured-projects .project-div:nth-child(4) .card:hover .project-description {
-  display: none;
-}
-.project-carousel .featured-projects .project-div:nth-child(5) .card {
-  background-image: none;
-  background-color: #f8f5eb;
-}
-.project-carousel .featured-projects .project-div:nth-child(5) .card:hover {
-  background-image: url("/static/img/project5.png");
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center;
-  background-color: #021e36;
-  background-size: cover;
-  transition: all ease-in-out 0.5s;
-}
-.project-carousel .featured-projects .project-div:nth-child(5) .card:hover .project-description {
-  display: none;
+
+.mat {
+  padding: 3rem;
 }
 
 /* EXPERIENCE STYLES */
@@ -311,24 +226,6 @@ input, textarea {
   padding-bottom: 1rem;
 }
 
-.skills-list {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-
-.skills-list-detail {
-  margin: 0 1em;
-}
-
-.exp-list, .skills-list {
-  margin: 0 1em;
-}
-.exp-list .exp-list-detail, .exp-list .skills-list-detail, .skills-list .exp-list-detail, .skills-list .skills-list-detail {
-  list-style: disc;
-  padding-bottom: 1rem;
-}
-
 /* ABOUT STYLES */
 /* CONTACT STYLES */
 #contact-form .field {
@@ -357,38 +254,19 @@ input, textarea {
   .container {
     max-width: 100vw;
   }
-  .exp-tabs {
-    display: flex;
-    justify-content: center;
-  }
-  .exp-tabs .TabsRoot {
-    width: 100%;
+  .featured-projects {
     flex-direction: column;
-    justify-content: center;
   }
-  .exp-tabs .tab-list {
+  #gallery {
     display: flex;
-    flex-direction: row;
-    align-items: last baseline;
-    justify-content: space-between;
-    overflow-x: scroll;
-    width: 100%;
-    padding-right: -1rem;
+    flex-direction: column;
+    align-items: center;
   }
-  .tab {
-    display: flex;
-    align-items: last baseline;
-    height: fit-content;
-    border-top: 2px solid #021e36;
-    border-left: 2px solid #021e36;
-    border-right: 2px solid #021e36;
-    border-radius: 15px 15px 0 0;
-    width: fit-content;
+  #gallery #gallery-header {
+    margin-left: 0;
   }
-  .tab-content {
-    border: 2px solid #021e36;
-    border-radius: 0 0 15px 15px;
-    width: 100%;
+  .canvas button {
+    display: none;
   }
 }
 @media screen and (min-width: 480px) {
@@ -402,39 +280,19 @@ input, textarea {
   .container {
     max-width: 100vw;
   }
-  .exp-tabs {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
-  .exp-tabs .TabsRoot {
-    width: 100%;
+  .featured-projects {
     flex-direction: column;
-    justify-content: center;
   }
-  .exp-tabs .tab-list {
+  #gallery {
     display: flex;
-    flex-direction: row;
-    align-items: last baseline;
-    justify-content: space-between;
-    overflow-x: auto;
-    width: 100%;
-    padding-right: -1rem;
+    flex-direction: column;
+    align-items: center;
   }
-  .tab {
-    display: flex;
-    align-items: last baseline;
-    height: fit-content;
-    border-top: 2px solid #021e36;
-    border-left: 2px solid #021e36;
-    border-right: 2px solid #021e36;
-    border-radius: 15px 15px 0 0;
-    width: fit-content;
+  #gallery #gallery-header {
+    margin-left: 0;
   }
-  .tab-content {
-    border: 2px solid #021e36;
-    border-radius: 0 0 15px 15px;
-    width: 100%;
+  .canvas button {
+    display: none;
   }
 }
 @media screen and (min-width: 768px) {
@@ -448,38 +306,19 @@ input, textarea {
   .container {
     max-width: 80vw;
   }
-  .exp-tabs {
-    display: flex;
-    justify-content: center;
-  }
-  .exp-tabs .TabsRoot {
-    width: 100%;
+  .featured-projects {
     flex-direction: row;
-    justify-content: center;
   }
-  .exp-tabs .tab-list {
+  #gallery {
     display: flex;
     flex-direction: column;
-    overflow-x: visible;
-    width: 30%;
-    max-width: 380px;
-  }
-  .tab {
-    display: flex;
     align-items: center;
-    justify-content: center;
-    height: 25%;
-    border-top: 2px solid #021e36;
-    border-left: 2px solid #021e36;
-    border-bottom: 2px solid #021e36;
-    border-radius: 15px 0 0 15px;
-    width: 100%;
   }
-  .tab-content {
-    border: 2px solid #021e36;
-    border-radius: 0 15px 15px 0;
-    width: 50%;
-    max-width: 700px;
+  #gallery #gallery-header {
+    margin-left: 0;
+  }
+  .canvas button {
+    display: block;
   }
 }
 @media screen and (min-width: 960px) {
@@ -490,36 +329,17 @@ input, textarea {
   input, textarea {
     width: 600px;
   }
-  .exp-tabs {
-    display: flex;
-    justify-content: center;
+  .hide-lg {
+    display: none;
   }
-  .exp-tabs .TabsRoot {
+  .featured-projects {
     flex-direction: row;
-    justify-content: center;
-    width: 100%;
   }
-  .exp-tabs .tab-list {
-    display: flex;
-    flex-direction: column;
-    width: 25%;
-    max-width: 380px;
+  #gallery-header {
+    margin-left: 10vw;
   }
-  .tab {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 25%;
-    border-top: 2px solid #021e36;
-    border-left: 2px solid #021e36;
-    border-bottom: 2px solid #021e36;
-    border-radius: 15px 0 0 15px;
-    width: 100%;
-  }
-  .tab-content {
-    border: 2px solid #021e36;
-    border-radius: 0 15px 15px 0;
-    width: 50%;
+  .canvas button {
+    display: block;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -530,36 +350,17 @@ input, textarea {
   input, textarea {
     width: 600px;
   }
-  .exp-tabs {
-    display: flex;
-    justify-content: center;
+  .hide-xl {
+    display: none;
   }
-  .exp-tabs .TabsRoot {
+  .featured-projects {
     flex-direction: row;
-    justify-content: center;
-    width: 100%;
   }
-  .exp-tabs .tab-list {
-    display: flex;
-    flex-direction: column;
-    width: 25%;
-    max-width: 380px;
+  #gallery-header {
+    margin-left: 10vw;
   }
-  .tab {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 25%;
-    border-top: 2px solid #021e36;
-    border-left: 2px solid #021e36;
-    border-bottom: 2px solid #021e36;
-    border-radius: 15px 0 0 15px;
-    width: 100%;
-  }
-  .tab-content {
-    border: 2px solid #021e36;
-    border-radius: 0 15px 15px 0;
-    width: 50%;
+  .canvas button {
+    display: block;
   }
 }
 

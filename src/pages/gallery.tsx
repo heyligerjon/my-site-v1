@@ -1,53 +1,10 @@
-import Link from 'next/link'
+import Featurette from '@/components/featurette'
 
 export default function Gallery() {
-
-
     return (
-        <div id='gallery' className='container gallery-container'>
-            <h1 id='gallery-header' className='section-header gradient-text'>Gallery</h1>
-            <div id="featurette" className="featurette">
-                <div className='project-carousel'>
-                    <ul className='featured-projects'>
-                        <li id='project-1' className='project-div'>
-                            <div className="card">
-                                <p className='project-description'>
-                                    <code>crate.digital</code> {"is an upcoming blog and digital media site focused on creating a space to promote underground musicians and artists organically. Like digging through a digital record crate."}
-                                </p>
-                            </div>
-                        </li>
-                        {/* <li id='project-2' className='project-div'>
-                            <h4 className='project-header'>Project 2</h4>
-                            <div className="card">
-                                <p className='project-description'>
-                                    A simple social media web app that allows you to update statuses and communicate with users 
-                                </p>
-                            </div>
-                        </li> */}
-                        <li id='project-3' className='project-div'>
-                            <div className="card">
-                                <p className='project-description'>
-                                    {"A simple social media web app that allows you to update statuses and communicate with users "}
-                                </p>
-                            </div>
-                        </li>
-                        <li id='project-4' className='project-div'>
-                            <div className="card">
-                                <p className='project-description'>
-                                    {"A Wikipedia-like online encyclopedia, where entries can be viewed by visiting each entry's page."}
-                                </p>
-                            </div>
-                        </li>
-                        <li id='project-5' className='project-div'>
-                            <div className="card">
-                                <p className='project-description'>
-                                    {"Single-page web app using React.js that allows users to create and edit a to-do list."}
-                                </p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>  
+        <div id='gallery' className='mt-[57px] w-full'>
+            <h1 id='gallery-header' className='mt-8 mb-4 ml-[10vw] w-fit gradient-text'>Gallery</h1>
+            <Featurette />
         </div>
       );
 }

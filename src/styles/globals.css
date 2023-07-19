@@ -10,6 +10,10 @@ ol {
   padding: 0;
 }
 
+html, body, #__next {
+  height: 100%;
+}
+
 /* FONTS */
 @font-face {
   font-family: "InterstateMono";
@@ -40,9 +44,7 @@ code {
 /* BASIC STYLES */
 body {
   font-family: "IBM Plex Mono";
-  font-size: 16px;
   color: #021e36;
-  line-height: 1.5;
   background: #f8f5eb;
 }
 
@@ -364,7 +366,7 @@ input, textarea {
   #gallery {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
   }
   #gallery #gallery-header {
     margin-left: 10vw;

@@ -5,7 +5,7 @@ import Footer from '@/components/footer'
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <div className='relative flex flex-col'>
+    <div className='relative flex flex-col h-full'>
       <Nav />
       <Component {...pageProps} />
       <Footer />

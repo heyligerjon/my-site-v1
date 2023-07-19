@@ -335,7 +335,12 @@ input, textarea {
   .featured-projects {
     flex-direction: row;
   }
-  #gallery-header {
+  #gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #gallery #gallery-header {
     margin-left: 10vw;
   }
   .canvas button {
@@ -356,7 +361,12 @@ input, textarea {
   .featured-projects {
     flex-direction: row;
   }
-  #gallery-header {
+  #gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #gallery #gallery-header {
     margin-left: 10vw;
   }
   .canvas button {

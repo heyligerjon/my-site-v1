@@ -16,8 +16,8 @@ html, body, #__next {
 
 /* FONTS */
 @font-face {
-  font-family: "InterstateMono";
-  src: url("/static/fonts/interstatemono.otf");
+  font-family: "IBM Plex Mono";
+  src: url("/static/fonts/IBMPlexMono-Regular.ttf");
 }
 @font-face {
   font-family: "Wired";
@@ -34,7 +34,7 @@ code {
 }
 
 .mono {
-  font-family: "InterstateMono", monospace;
+  font-family: "IBM Plex Mono", monospace;
 }
 
 .wired {

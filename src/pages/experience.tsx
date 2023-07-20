@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Document, Page, pdfjs } from 'react-pdf'
+
+pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
 // window resize hook
 function useWindowSize() {
     const [size, setSize] = useState([0, 0]);
@@ -15,22 +17,15 @@ function useWindowSize() {
 }
 
 export default function Experience() {
-    pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
     
     const [width, height] = useWindowSize();
-    // need to move logic to footer element to remove DOM error
-    var nav = document.getElementById("navbar");
-    var footer = document.getElementById('footer');
 
-    if (nav && footer) {
-        nav.style.display = 'none'
-        footer.style.display = 'none'
-    }
+    // add logic to header and footer to hide on this page
 
     return (
-        <div id='experience' className='container absolute flex justify-center self-center'>
+        <div id='experience' className='flex mt-[57px] justify-center self-center'>
             <button className='relative text-3xl self-start -left-20 btn-gradient border-2 border-dark p-3 h-fit mt-8' onClick={() => history.back()}>&lt;-</button>
-            <Document className='relative -left-4' file='/static/files/react-resume.pdf'>
+            <Document className='relative -left-4 h-fit' file='/static/files/react-resume.pdf'>
                 <Page className='flex justify-end' pageNumber={1} width={width/2} renderTextLayer={false} renderAnnotationLayer={false}/>
             </Document>
         </div>

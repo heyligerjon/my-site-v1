@@ -36,7 +36,7 @@ export default function About() {
     if (width <= 960) {
         return (
             <main className='flex flex-col items-center w-full'>
-                <div id='about' className={`container flex flex-col self-center items-center w-full mt-[57px]`}>
+                <div id='about' className={`container flex flex-col self-center items-center w-full`}>
                     <h1 id='about-header' className='z-10 mt-8 w-fit gradient-text'>About Me</h1>
                     <div className={`self-center my-4`}>
                         <Image className='' src={`/static/img/${imgSrc}`} alt='J. Isaacs' width={imgSz} height={imgSz}/>
@@ -53,7 +53,7 @@ export default function About() {
     else {
         return (
             <main className='flex flex-col items-center w-full'>
-                <div id='about' className={`container flex ${flexDir} justify-between pt-[57px]`}>
+                <div id='about' className={`container flex ${flexDir} justify-between pt-8`}>
                     <div className={`self-center`}>
                         <Image className='' src={`/static/img/${imgSrc}`} alt='J. Isaacs' width={imgSz} height={imgSz}/>
                     </div>

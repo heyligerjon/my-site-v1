@@ -63,7 +63,10 @@ input, textarea {
 }
 
 .container {
-  min-height: 700px;
+  margin-top: 57px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10rem;
 }
 
 /* THEMING, ANIMATIONS, & COLORS */

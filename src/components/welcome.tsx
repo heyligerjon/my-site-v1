@@ -38,7 +38,7 @@ export default function Welcome() {
     }
 
     return(
-        <div id='welcome' className='border-2 border-dark m-5 bg-trans'>
+        <div id='welcome' className='border-2 border-dark mt-40 m-4 bg-trans'>
             <div id='home-text' className='p-4'>
                 <Image className='image' src='/static/img/j-isaacs-headshot2.jpg' alt='J. Isaacs headshot' width={100} height={100}/>
                 <p id='name' className={`${nameSize} gradient-text wired pt-1.5`}> 

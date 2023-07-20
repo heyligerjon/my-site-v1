@@ -126,7 +126,7 @@ export default function Featurette() {
         console.log(canvases);
 
         gallery = canvases?.map((canvas, index) => 
-            <div key={index} className="relative canvas flex justify-around items-center h-full max-h-[900px] w-full mt-auto snap-center">
+            <div key={index} className="relative canvas flex justify-around items-center h-fit max-h-[900px] w-full mt-4 snap-center">
                 <button onClick={() => getPrev()} className='hide-md relative text-3xl self-start btn-gradient border-2 border-dark p-3 h-fit mt-8'>&lt;-</button>
                 <Image className={canvas.mat? 'mat' : ''} src={canvas.src} alt={canvas.alt} width={canvas.width === 0? Math.min(height,900) : canvas.width} height={canvas.height === 0? Math.min(height,450) : canvas.height}/>
                 <button onClick={() => getNext()} className='relative text-3xl self-start btn-gradient border-2 border-dark p-3 h-fit mt-8'>-&gt;</button>
@@ -140,9 +140,9 @@ export default function Featurette() {
 
 
     return (
-        <div id="featurette" className="flex justify-center w-full h-full">
-            <div className='w-full'>
-                <ul className='w-full h-full snap-x snap-mandatory'>
+        <div id="featurette" className="flex justify-center w-full">
+            <div className='w-full h-fit'>
+                <ul className='w-full h-fit snap-x snap-mandatory'>
                     {gallery && width > 468? gallery[currentIndex] : gallery}
                 </ul>
             </div>

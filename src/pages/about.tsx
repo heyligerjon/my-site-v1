@@ -53,7 +53,7 @@ export default function About() {
     else {
         return (
             <main className='flex flex-col items-center w-full'>
-                <div id='about' className={`container flex ${flexDir} justify-between pt-8`}>
+                <div id='about' className={`container flex ${flexDir} justify-between pt-40`}>
                     <div className={`self-center`}>
                         <Image className='' src={`/static/img/${imgSrc}`} alt='J. Isaacs' width={imgSz} height={imgSz}/>
                     </div>

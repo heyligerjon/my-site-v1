@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Image from "next/image";
 
-const imgSrc = 'project3.png'
+const imgSrc = 'j-isaacs-headshot2.jpg'
 const blurb = `\tGrowing up in Atlanta, I faced countless challenges in pursuit of my passion for technology. And though I turned to my other hobbies, music and sports, much of the time. My love for computing and science in general always shone through no matter what. From spending years determining the optimum method for storing my music library, to my fascination with mechanics, biological or otherwise, technology has permeated into every facet of my life. And in this it has led me to new, exciting challenges at every step of my journey.`
 
 // window resize hook
@@ -41,7 +41,7 @@ export default function About() {
                     <div className={`self-center my-4`}>
                         <Image className='' src={`/static/img/${imgSrc}`} alt='J. Isaacs' width={imgSz} height={imgSz}/>
                     </div>
-                    <div className={`flex ${sz} self-center p-4 -mt-32 mb-32 mx-8 border-2 border-dark bg-trans`}>
+                    <div className={`flex ${sz} self-center p-4 -mt-24 mb-32 mx-8 border-2 border-dark bg-trans`}>
                         <p className='opacity-100'>
                             {blurb}
                         </p>

@@ -44,8 +44,8 @@ code {
 /* BASIC STYLES */
 body {
   font-family: "IBM Plex Mono";
-  color: #021e36;
-  background: #f8f5eb;
+  color: #f1f1f0;
+  background: #031320;
 }
 
 h1 {
@@ -57,8 +57,8 @@ p {
 }
 
 input, textarea {
-  border: 1px solid #021e36;
-  background-color: #fdfdfa;
+  border: 1px solid #f1f1f0;
+  background-color: rgba(3, 19, 32, 0.75);
   padding: 0.25rem 0.5rem;
 }
 
@@ -68,83 +68,77 @@ input, textarea {
 
 /* THEMING, ANIMATIONS, & COLORS */
 .bg-light {
-  background-color: #f8f5eb;
-  color: #021e36;
+  background-color: #031320;
+  color: #f1f1f0;
 }
 
 .bg-trans {
-  background-color: rgba(248, 245, 235, 0.5);
-  color: #021e36;
+  background-color: rgba(3, 19, 32, 0.75);
+  color: #f1f1f0;
 }
 
 .bg-dark {
-  background-color: #021e36;
-  color: #f8f5eb;
+  background-color: #f1f1f0;
+  color: #031320;
 }
 
 .border-dark {
-  border-color: #021e36;
+  border-color: #f1f1f0;
 }
 
 .gradient {
-  background: linear-gradient(to right, #021e36, #ff00ae 105%);
+  background: linear-gradient(to top right, #031320, #0bcca5);
 }
 
 .gradient-text {
-  background: linear-gradient(to top left, #ff00ae, #021e36 150%);
+  background: linear-gradient(to top left, #f1f1f0, #0bcca5 50%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .gradient-text-2 {
-  color: #ff00ae;
+  color: #0bcca5;
 }
 
 .btn {
-  background: #f8f5eb;
+  background: #031320;
   background-size: 200% 100%;
   background-position: top left;
 }
 
 .btn-gradient {
-  background: linear-gradient(to bottom right, #021e36, #ff00ae);
-  background-size: 200% 100%;
+  background: linear-gradient(to bottom right, #f1f1f0, #0bcca5);
+  background-size: 400% 100%;
   background-position: top left;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.btn-gradient-2 {
-  background: linear-gradient(to bottom left, #021e36, #ff00ae);
-  background-size: 200% 100%;
-  background-position: top left;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
+/* separate out button text and button background
+ * opacity 0 for background and fade in on hover
+ * text background can be current btn config
+ */
 .btn:hover {
   background: transparent;
   background-position: bottom right;
-  color: #f8f5eb;
+  color: #f1f1f0;
   transition: ease-in 0.3s;
 }
 
 .btn-gradient:hover {
+  background-image: linear-gradient(to bottom right, #031320, #0bcca5);
   background-position: bottom right;
-  color: #f8f5eb;
+  color: #f1f1f0;
   -webkit-background-clip: unset;
-  -webkit-text-fill-color: #f8f5eb;
-  transition: ease-in 0.3s;
+  -webkit-text-fill-color: #f1f1f0;
+  transition: -webkit-text-fill-color 0.1s;
+  transition: background 0.5s ease-out;
 }
 
-.btn-gradient-2:hover {
-  background-position: bottom left;
-  color: #f8f5eb;
-  -webkit-background-clip: unset;
-  -webkit-text-fill-color: #f8f5eb;
-  transition: ease-in 0.3s;
-}
-
+/* separate out button text and button background
+ * opacity 0 for background and fade in on hover
+ * text background can be current btn config
+ */
 /* COMPONENTS */
 .nav-link {
   display: flex;
@@ -155,16 +149,16 @@ input, textarea {
 }
 
 .nav-link:hover, .nav-link:focus, .nav-link:active {
-  background-color: #021e36;
-  color: #f8f5eb;
+  background-color: #f1f1f0;
+  color: #031320;
   transition: 0.1s;
 }
 
 /* HOMEPAGE STYLES */
 /* GALLERY STYLES */
 .project-description {
-  visibility: hidden;
-  color: #f8f5eb;
+  opacity: 0;
+  color: #031320;
   text-align: center;
   padding: 1rem 0;
   bottom: 0;
@@ -172,19 +166,20 @@ input, textarea {
 }
 
 .canvas {
-  background-color: white;
   width: 100%;
 }
 
-.canvas:hover .project-description {
-  visibility: visible;
-  background-color: rgba(2, 30, 54, 0.5);
-  color: #f8f5eb;
+.project-description:hover {
+  opacity: 1;
+  background-color: rgba(1, 10, 18, 0.75);
+  color: #f1f1f0;
   transition: ease-out 0.3s;
 }
 
 .mat {
-  padding: 3rem;
+  background-color: white;
+  padding: 2rem;
+  box-shadow: 0px 0px 0px 1rem #031320 inset;
 }
 
 /* EXPERIENCE STYLES */
@@ -198,8 +193,8 @@ input, textarea {
 }
 
 .tab:active, .tab:focus, .tab:hover, .tab:target {
-  background-color: #021e36;
-  color: #f8f5eb;
+  background-color: #f1f1f0;
+  color: #031320;
   transition: 0.25s;
 }
 

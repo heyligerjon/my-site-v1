@@ -1,5 +1,6 @@
-import Image from 'next/image'
-import React, { useState, useEffect } from 'react'
+import Image from 'next/image';
+import React, { useState, useEffect } from 'react';
+import parse from 'html-react-parser';
 
 /* 
     canvas data object
@@ -29,11 +30,12 @@ interface Canvas {
 let data = [
 {
     "id": 1,
-    "src": '/static/gallery/crate.gif',
+    "src": '/static/img/gallery/crate.gif',
     "alt": 'crate.digital',
     "detail": {
         "title": 'crate.digital',
-        "caption": '',
+        "caption": `<a className='hover:text-[#4AF626] hover:font-["GlassTTY"] hover:text-[16px]' href='https://www.crate.digital'>crate.digital</a> is a digital media platform dedicated to promoting the discovery of independent musicians and artists.
+        `,
     },
     "mat": false,
     "width": 0,
@@ -41,13 +43,25 @@ let data = [
 },
 {
     "id": 2,
-    "src": '/static/gallery/boxes.svg',
-    "alt": 'boxes',
+    "src": '/static/img/gallery/boxes.svg',
+    "alt": 'boxes.svg',
     "detail": {
         "title": 'boxes',
         "caption": '',
     },
-    "mat": false,
+    "mat": true,
+    "width": 0,
+    "height": 0,
+},
+{
+    "id": 3,
+    "src": '/static/img/gallery/lines.svg',
+    "alt": 'lines.svg',
+    "detail": {
+        "title": 'lines',
+        "caption": '',
+    },
+    "mat": true,
     "width": 0,
     "height": 0,
 }
@@ -112,13 +126,13 @@ export default function Featurette() {
         console.log(canvases);
 
         gallery = canvases?.map((canvas, index) => 
-            <div className="relative canvas flex justify-around items-center bg-white h-full max-h-[450px] w-full snap-center">
+            <div className="relative canvas flex justify-around items-center h-fit max-h-[900px] w-full mt-auto snap-center">
                 <button onClick={() => getPrev()} className='hide-md relative text-3xl self-start btn-gradient border-2 border-dark p-3 h-fit mt-8'>&lt;-</button>
-                <Image key={index} className='image' src={canvas.src} alt={canvas.alt} width={canvas.width === 0? Math.max(height,450) : canvas.width} height={canvas.height === 0? Math.min(height,450) : canvas.height}/>
-                <button onClick={() => getNext()} className='relative text-3xl self-start btn-gradient-2 border-2 border-dark p-3 h-fit mt-8'>-&gt;</button>
+                <Image key={index} className={canvas.mat? 'mat' : ''} src={canvas.src} alt={canvas.alt} width={canvas.width === 0? Math.min(height,900) : canvas.width} height={canvas.height === 0? Math.min(height,450) : canvas.height}/>
+                <button onClick={() => getNext()} className='relative text-3xl self-start btn-gradient border-2 border-dark p-3 h-fit mt-8'>-&gt;</button>
                 <div className='absolute project-description w-full'>
-                    <h4 className='font-bold'>Project title</h4>
-                    <p className='text-sm'>Project caption goes here</p>
+                    <h4 className='font-bold text-left ml-[10vw] pt-2'>{parse(canvas.detail.title)}</h4>
+                    <p className='text-sm text-left ml-[10vw] pt-2'>{parse(canvas.detail.caption)}</p>
                 </div>
             </div>
         );

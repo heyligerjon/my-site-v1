@@ -126,9 +126,9 @@ export default function Featurette() {
         console.log(canvases);
 
         gallery = canvases?.map((canvas, index) => 
-            <div className="relative canvas flex justify-around items-center h-fit max-h-[900px] w-full mt-auto snap-center">
+            <div key={index} className="relative canvas flex justify-around items-center h-fit max-h-[900px] w-full mt-auto snap-center">
                 <button onClick={() => getPrev()} className='hide-md relative text-3xl self-start btn-gradient border-2 border-dark p-3 h-fit mt-8'>&lt;-</button>
-                <Image key={index} className={canvas.mat? 'mat' : ''} src={canvas.src} alt={canvas.alt} width={canvas.width === 0? Math.min(height,900) : canvas.width} height={canvas.height === 0? Math.min(height,450) : canvas.height}/>
+                <Image className={canvas.mat? 'mat' : ''} src={canvas.src} alt={canvas.alt} width={canvas.width === 0? Math.min(height,900) : canvas.width} height={canvas.height === 0? Math.min(height,450) : canvas.height}/>
                 <button onClick={() => getNext()} className='relative text-3xl self-start btn-gradient border-2 border-dark p-3 h-fit mt-8'>-&gt;</button>
                 <div className='absolute project-description w-full'>
                     <h4 className='font-bold text-left ml-[10vw] pt-2'>{parse(canvas.detail.title)}</h4>

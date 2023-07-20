@@ -1,8 +1,5 @@
 import { useState, useEffect } from 'react';
 import { Document, Page, pdfjs } from 'react-pdf'
-
-pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
-
 // window resize hook
 function useWindowSize() {
     const [size, setSize] = useState([0, 0]);
@@ -18,6 +15,8 @@ function useWindowSize() {
 }
 
 export default function Experience() {
+    pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
+    
     const [width, height] = useWindowSize();
     // need to move logic to footer element to remove DOM error
     var nav = document.getElementById("navbar");

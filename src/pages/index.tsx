@@ -1,9 +1,6 @@
 import React, { useState } from 'react'
 import ContactForm from '@/components/contactform'
 import Welcome  from '@/components/welcome'
-import { Inter } from 'next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
     const [error, setError] = useState('');

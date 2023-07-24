@@ -8,7 +8,9 @@ export default function ContactForm() {
 
   return (
     <div id='contact' className='container flex flex-col items-center'>
-        <h1 id='contact-header' className='section-header gradient-text'>Contact Me</h1>
+        <h1 id='contact-header' className='section-header p-2 border-2 border-dark bg-trans'>
+            <p className='gradient-text'>Contact</p>
+        </h1>
         <Form.Root id='contact-form' className='FormRoot text-sm w-fit' action='https://api.web3forms.com/submit' method='POST'>
             <input type="hidden" name="access_key" value="fcbdd708-6581-4f6b-abe8-752f86af47cd" />
             <Form.Field className='FormField field' name='name'>

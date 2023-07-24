@@ -41,7 +41,15 @@ export default function About() {
                         <p className='gradient-text'>About Me</p>
                         </h1>
                     <div className={`self-center my-4`}>
-                        <Image className='' src={`/static/img/${imgSrc}`} alt='J. Isaacs' width={imgSz} height={imgSz}/>
+                        <Image 
+                        className='' 
+                        src={`/static/img/${imgSrc}`} 
+                        alt='J. Isaacs' 
+                        width={imgSz} 
+                        height={imgSz}
+                        blurDataURL='URL' 
+                        placeholder='blur'
+                        />
                     </div>
                     <div className={`flex ${sz} self-center p-4 -mt-24 mb-32 mx-8 border-2 border-dark bg-trans`}>
                         <p className='opacity-100'>
@@ -57,7 +65,15 @@ export default function About() {
             <main className='flex flex-col items-center w-full'>
                 <div id='about' className={`container flex ${flexDir} justify-between pt-40`}>
                     <div className={`self-center`}>
-                        <Image className='' src={`/static/img/${imgSrc}`} alt='J. Isaacs' width={imgSz} height={imgSz}/>
+                        <Image 
+                        className='' 
+                        src={`/static/img/${imgSrc}`} 
+                        alt='J. Isaacs' 
+                        width={imgSz} 
+                        height={imgSz}
+                        blurDataURL='URL' 
+                        placeholder='blur'
+                        />
                     </div>
                     <h1 id='about-header' className='mt-8 mb-4 p-2 w-fit h-fit border-2 border-dark bg-trans'>
                         <p className='gradient-text'>About Me</p>

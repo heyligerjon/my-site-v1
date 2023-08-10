@@ -26,7 +26,7 @@ export default function Experience() {
         <div id='experience' className='flex mt-[57px] justify-center self-center'>
             <button className='relative text-3xl self-start -left-20 btn-gradient border-2 border-dark p-3 h-fit mt-8' onClick={() => history.back()}>&lt;-</button>
             <Document className='relative -left-4 h-fit' file='/static/files/react-resume.pdf'>
-                <Page className='flex justify-end' pageNumber={1} width={width/2} renderTextLayer={false} renderAnnotationLayer={false}/>
+                <Page className='flex justify-end' pageNumber={1} width={width > 468? 500: width} renderTextLayer={false} renderAnnotationLayer={false}/>
             </Document>
         </div>
       );

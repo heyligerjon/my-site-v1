@@ -1,5 +1,5 @@
-import * as NavigationMenu from '@radix-ui/react-navigation-menu';
 import Link from "next/link";
+import * as NavigationMenu from '@radix-ui/react-navigation-menu';
 import { HamburgerMenuIcon } from '@radix-ui/react-icons';
 
 export default function Nav() {

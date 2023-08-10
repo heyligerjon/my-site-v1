@@ -1,4 +1,4 @@
-import React, { useState, useEffect, SetStateAction } from "react";
+import React, { useState, useEffect } from "react";
 import p5Types from "p5";
 import dynamic from 'next/dynamic'
 
